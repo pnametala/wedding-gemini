@@ -171,7 +171,7 @@ const NavCard = ({ title, sub, onClick, colorVar }) => (
         className={`bg-[var(--color-surface)] p-8 md:p-10 text-center shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer rounded-[20px] border-b-[8px] flex flex-col items-center justify-center min-h-[220px] w-full`}
         style={{ borderBottomColor: `var(--color-${colorVar})` }}
     >
-        <h3 className="font-[var(--font-heading)] font-bold text-[var(--color-primary)] text-lg md:text-xl mb-3 uppercase tracking-wider">{title}</h3>
+        <h3 className="cinzel font-[var(--font-heading)] font-bold text-[var(--color-primary)] text-lg md:text-xl mb-3 uppercase tracking-wider">{title}</h3>
         <p className="text-gray-600 text-sm md:text-base leading-relaxed">{sub}</p>
     </div>
 );
@@ -441,18 +441,18 @@ const HomePage = ({ t, setView, onOpenModal }) => {
     return (
         <>
             {/* HERO SECTION */}
-            <section className="h-screen flex flex-col justify-center items-center text-center relative bg-[url('https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?q=80&w=2623&auto=format&fit=crop')] bg-fixed bg-center bg-cover">
+            <section className="h-screen flex flex-col justify-center items-center text-center relative bg-[url('/background.png')] bg-fixed bg-center bg-cover">
                 <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-bg)]/30 to-[var(--color-bg)]/60"></div>
                 <div className="relative z-10 px-4 -mt-12 w-full animate-[float_6s_ease-in-out_infinite]">
-                    <h1 className="font-[var(--font-script)] text-6xl md:text-8xl text-[var(--color-primary)] mb-2 drop-shadow-sm">Raissa & Pedro</h1>
+                    <h1 className="font-[var(--font-script)] text-6xl md:text-8xl text-[var(--color-primary)] mb-2 drop-shadow-sm autography">Raissa & Pedro</h1>
                     <div className="flex flex-col md:flex-row items-center justify-center gap-2 font-[var(--font-heading)] text-lg md:text-xl tracking-[0.2em] text-[var(--color-primary)] font-bold uppercase mb-8 drop-shadow-sm">
                         <div className="flex items-center gap-2">
                             <MapPin className="w-5 h-5 text-[var(--color-secondary)]" />
-                            <span>{t.subtitle}</span>
+                            <span className='cinzel'>{t.subtitle}</span>
                         </div>
                     </div>
                     <div className="border-y-2 border-[var(--color-primary)] py-3 mb-10 inline-block">
-                        <span className="font-[var(--font-heading)] text-xl md:text-4xl font-bold text-[var(--color-primary)] tracking-widest">{t.date}</span>
+                        <span className="cinzel font-[var(--font-heading)] text-xl md:text-4xl font-bold text-[var(--color-primary)] tracking-widest">{t.date}</span>
                     </div>
                     <br />
                     <button onClick={onOpenModal} className="bg-[var(--color-secondary)] text-white px-8 py-3 rounded-full font-[var(--font-heading)] font-bold tracking-widest border border-[var(--color-secondary)] hover:bg-[#d65b38] hover:-translate-y-1 hover:shadow-lg transition-all">

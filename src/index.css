@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Autography';
+  src: url('./assets/fonts/Autography.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cinzel';
+  src: url('./assets/fonts/Cinzel-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.autography {
+  font-family: 'Autography', sans-serif;
+}
+
+.cinzel {
+  font-family: 'Cinzel', sans-serif;
+}
+
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:where(.dark, .dark *));
