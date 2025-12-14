@@ -107,25 +107,28 @@ const CONTENT = {
             dest: { title: "O Destino", sub: "Descubra a Bahia" }
         },
         itinerary: {
-            title: "O Lineup",
-            sub: "Nosso Festival de Amor",
-            tabs: ["Dia 1: Boas Vindas", "Dia 2: O Casamento", "Dia 3: Ressaca"],
-            events: {
-                pre: [
-                    { time: "10:00", title: "Dia de Praia", desc: "Vamos curtir um dia relax em uma área privada na praia para nos prepararmos para o grande dia!", badge: "Relax", color: "highlight" },
-                    { time: "19:00", title: "Jantar de Boas-vindas", desc: "Venha desfrutar de um saboroso jantar baiano conosco.", badge: "Jantar", color: "secondary" },
-                    { time: "22:00", title: "Axé Moi", desc: "Prepare-se para vivenciar o que Porto Seguro tem de mais único, prepare os passinhos e a energia.", badge: "Festa", color: "muted" }
-                ],
-                wed: [
-                    { time: "15:30", title: "Cerimônia", desc: "Capela da Colina. Não se atrase!", badge: "Palco Principal", color: "secondary" },
-                    { time: "17:00", title: "Início da Festa", desc: "Que comece a celebração!" },
-                    { time: "18:30", title: "Banda 1", desc: "Música ao vivo para começar." },
-                    { time: "21:00", title: "Banda 2", desc: "A energia continua!" }
-                ],
-                post: [
-                    { time: "10:00", title: "Ressaca", desc: "Encontre-nos na praia para relaxar depois.", badge: "Relax", color: "highlight" }
-                ]
-            }
+        title: "O Lineup",
+        sub: "Nosso Carnaval de Amor",
+        tabs: ["Dia 1: Aquecimento", "Dia 2: O Casamento", "Dia 3: Ressaca"],
+        events: {
+            pre: [
+            { time: "Quarta - 19:00", title: "Jantar de Boas-vindas", desc: "Venha desfrutar de um saboroso jantar baiano conosco.", badge: "Jantar", color: "secondary" },
+            { time: "Quinta - 10:00", title: "Axé Moi", desc: "Prepare-se para vivenciar o que Porto Seguro tem de mais único, prepare as coreografias e a energia para um dia memoravel!", badge: "Relax", color: "highlight" },
+            { time: "Quinta - 18:00", title: "Jantar para recarregar energias ", desc: "Venha desfrutar de um saboroso jantar baiano conosco.", badge: "Jantar", color: "secondary" },
+            { time: "Sexta  - 10:00", title: "Pre-Casamento/Beach day", desc: "Uma area da praia só pra nós, intereja com todos os convidados e tenha um dia mais tranquilo, mas cheio de amor para se preparar para o grande dia!.", badge: "Festa", color: "muted" }
+            ],
+            wed: [
+            { time: "15:30", title: "Cerimônia", desc: "Capela da Colina. Não se atrase!", badge: "Palco Principal", color: "secondary" },
+            { time: "17:00", title: "Início da Festa", desc: "Que comece a celebração!" },
+            { time: "18:30", title: "Banda 1", desc: "Música ao vivo para começar." },
+            { time: "21:00", title: "Banda 2", desc: "A energia continua!" }
+            ],
+            post: [
+            { time: "Domingo 10:00", title: "Café da manhã dos campeões!", desc: "Encontre-nos na praia para relaxar depois.", badge: "Relax", color: "highlight" },
+            { time: "Domingo 01:00", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia.", badge: "Relax", color: "highlight" }
+
+            ]
+        }
         },
         modal: {
             title_auth: "Acesso ao RSVP",
@@ -225,11 +228,18 @@ const StoryPage = ({ t, lang, onBack }) => (
         <BackButton onClick={onBack} lang={lang} />
         <SectionHeader title={t.nav.story.title} sub={t.nav.story.sub} />
         <div className="max-w-2xl mx-auto border-l-2 border-[var(--color-secondary)] pl-8 text-left space-y-12 relative">
-            {[
-                { year: '2018', title: { en: "We Met in Sydney", pt: "Nos Conhecemos em Sydney" }, desc: { en: "A sunny afternoon at Bondi Beach changed everything.", pt: "Uma tarde ensolarada em Bondi mudou tudo." } },
-                { year: '2020', title: { en: "First Trip to Bahia", pt: "Primeira Viagem à Bahia" }, desc: { en: "We fell in love with the magic of Trancoso.", pt: "Nos apaixonamos pela magia de Trancoso." } },
-                { year: '2024', title: { en: "The Proposal", pt: "O Pedido" }, desc: { en: "Under the stars in Porto Seguro.", pt: "Sob as estrelas em Porto Seguro." } },
-                { year: '2026', title: { en: "The Wedding", pt: "O Casamento" }, desc: { en: "Our biggest adventure yet!", pt: "Nossa maior aventura!" }, color: true }
+            {[ 
+                { year: '2016', title: {en: "From work colleagues to lovers - or was it before?", pt: "De colegas de trabalho à namorados (ou será que foi antes?)"}, desc: {en: "A sunny afternoon at Bondi Beach changed everything.", pt: "Uma tarde ensolarada em Bondi mudou tudo."} },
+                { year: '2017', title: {en: "The big move!", pt: "A grande mudança!"}, desc: {en: "Under the stars in Porto Seguro.", pt: "Sob as estrelas em Porto Seguro."} },
+                { year: '2018', title: {en: "The first trips", pt: "As primeiras viagens!"}, desc: {en: "Under the stars in Porto Seguro.", pt: "Sob as estrelas em Porto Seguro."} },
+                { year: '2019', title: {en: "xxx", pt: "xxx"}, desc: {en: "Our biggest adventure yet!", pt: "Nossa maior aventura!"}, color: true },
+                { year: '2020', title: {en: "Lockdown", pt: "A bolha da Australia"}, desc: {en: "Our biggest adventure yet!", pt: "Nossa maior aventura!"}, color: true },
+                { year: '2021', title: {en: "Our first home!", pt: "Nosso cantinho"}, desc: {en: "Our biggest adventure yet!", pt: "Nossa maior aventura!"}, color: true },
+                { year: '2022', title: {en: "Love for Disney!", pt: "Amor pela Disney!"}, desc: {en: "Our biggest adventure yet!", pt: "Nossa maior aventura!"}, color: true },
+                { year: '2023', title: {en: "Frozen Hearts", pt: "Coração de gelo!"}, desc: {en: "Our biggest adventure yet!", pt: "Nossa maior aventura!"}, color: true },
+                { year: '2024', title: {en: "The Proposal!", pt: "O Pedido :)"}, desc: {en: "Our biggest adventure yet!", pt: "Nossa maior aventura!"}, color: true },
+                { year: '2025', title: {en: "Planning & Trips", pt: "Viajando e Planejando"}, desc: {en: "Our biggest adventure yet!", pt: "Nossa maior aventura!"}, color: true },
+                { year: '2026', title: {en: "The Wedding!", pt: "O Casamento"}, desc: {en: "Our biggest adventure yet!", pt: "Nossa maior aventura!"}, color: true }
             ].map((item, idx) => (
                 <div key={idx} className="relative">
                     <div className="absolute -left-[41px] top-1 w-4 h-4 bg-[var(--color-bg)] border-2 border-[var(--color-primary)] rounded-full"></div>
