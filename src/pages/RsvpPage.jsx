@@ -20,14 +20,14 @@ const RsvpPage = () => {
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
+        // e.preventDefault();
+        // setIsSubmitting(true);
 
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        // // Simulate API call
+        // await new Promise(resolve => setTimeout(resolve, 1500));
 
-        setIsSubmitting(false);
-        setIsSuccess(true);
+        // setIsSubmitting(false);
+        // setIsSuccess(true);
     };
 
     const resetForm = () => {
