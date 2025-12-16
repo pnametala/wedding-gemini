@@ -1,95 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MapPin, X, Heart, Plane, Home, HelpCircle, Sun, Info } from 'lucide-react';
 
-/* --- 1. DATA & CONFIGURATION --- */
-
-const CONTENT = {
-    en: {
-        rsvp_btn: "Confirm Presence",
-        subtitle: "Porto Seguro - Bahia - Brazil",
-        date: "19th September 2026",
-        nav: {
-            story: { title: "Our Story", sub: "From Australia to Bahia" },
-            stay: { title: "Where to Stay", sub: "Hotels & Map" },
-            dress: { title: "Dress Code", sub: "Tropical Formal" },
-            faq: { title: "FAQ", sub: "Questions & Answers" },
-            travel: { title: "Travel", sub: "Flights & Tips" },
-            dest: { title: "The Destination", sub: "Discover Bahia" }
-        },
-        itinerary: {
-            title: "The Lineup",
-            sub: "A Wedding Festival",
-            tabs: ["Day 1: Pre-Wedding", "Day 2: The Big Day", "Day 3: Recovery"],
-            events: {
-                pre: [
-                    { time: "17:00", title: "Sunset Welcome", desc: "Join us for caipirinhas at Cabana do Sol.", badge: "Casual", color: "sage" }
-                ],
-                wed: [
-                    { time: "15:30", title: "Ceremony", desc: "Chapel on the Hill. Don't be late!", badge: "Main Stage", color: "orange" },
-                    { time: "17:00", title: "Golden Hour", desc: "Cocktails overlooking the ocean." },
-                    { time: "22:00", title: "Party", desc: "DJ Set until sunrise." }
-                ],
-                post: [
-                    { time: "13:00", title: "Recovery BBQ", desc: "Fresh coconuts & chill vibes.", badge: "Chill", color: "blue" }
-                ]
-            }
-        },
-        modal: {
-            title_auth: "RSVP Access",
-            hint: "Hint: trancoso",
-            unlock: "Unlock",
-            title_form: "Welcome",
-            name: "Name",
-            attending: "Attending?",
-            yes: "Yes, I'm in!",
-            no: "Sadly, no",
-            submit: "Send RSVP"
-        }
-    },
-    pt: {
-        rsvp_btn: "Confirmar Presença",
-        subtitle: "Porto Seguro - Bahia - Brasil",
-        date: "19 de Setembro de 2026",
-        nav: {
-            story: { title: "Nossa História", sub: "Da Austrália para Bahia" },
-            stay: { title: "Hospedagem", sub: "Hotéis e Mapa" },
-            dress: { title: "Traje", sub: "Esporte Fino Tropical" },
-            faq: { title: "Dúvidas", sub: "Perguntas Frequentes" },
-            travel: { title: "Viagem", sub: "Voos e Dicas" },
-            dest: { title: "O Destino", sub: "Descubra a Bahia" }
-        },
-        itinerary: {
-            title: "O Lineup",
-            sub: "Nosso Festival de Amor",
-            tabs: ["Dia 1: Boas Vindas", "Dia 2: O Casamento", "Dia 3: Ressaca"],
-            events: {
-                pre: [
-                    { time: "17:00", title: "Sunset de Boas Vindas", desc: "Caipirinhas e música na Cabana do Sol.", badge: "Casual", color: "sage" }
-                ],
-                wed: [
-                    { time: "15:30", title: "Cerimônia", desc: "Capela da Colina. Não se atrase!", badge: "Palco Principal", color: "orange" },
-                    { time: "17:00", title: "Golden Hour", desc: "Coquetel com vista para o mar." },
-                    { time: "22:00", title: "Festa", desc: "DJ até o sol raiar." }
-                ],
-                post: [
-                    { time: "13:00", title: "Churrasco de Ressaca", desc: "Água de coco e relax.", badge: "Relax", color: "blue" }
-                ]
-            }
-        },
-        modal: {
-            title_auth: "Acesso ao RSVP",
-            hint: "Dica: trancoso",
-            unlock: "Entrar",
-            title_form: "Bem-vindo",
-            name: "Nome",
-            attending: "Você irá?",
-            yes: "Sim, com certeza!",
-            no: "Infelizmente não",
-            submit: "Enviar Confirmação"
-        }
-    }
-};
-
 /* --- 2. SHARED UI COMPONENTS --- */
 
 const BackButton = ({ onClick, lang }) => (
@@ -148,7 +59,7 @@ const SectionHeader = ({ title, sub }) => (
 
 const StoryPage = ({ t, lang, onBack }) => (
     <div className="max-w-5xl mx-auto px-6 py-24 min-h-screen animate-fade-in">
-        <BackButton onClick={onBack} lang={lang} />
+        <BackButton  lang={lang} />
         <SectionHeader title={t.nav.story.title} sub={t.nav.story.sub} />
         <div className="max-w-2xl mx-auto border-l-2 border-[#E86C48] pl-8 text-left space-y-12 relative">
             {[
@@ -172,7 +83,7 @@ const StoryPage = ({ t, lang, onBack }) => (
 
 const DestinationPage = ({ t, lang, onBack }) => (
     <div className="max-w-5xl mx-auto px-6 py-24 min-h-screen animate-fade-in">
-        <BackButton onClick={onBack} lang={lang} />
+        <BackButton  lang={lang} />
         <SectionHeader title={t.nav.dest.title} sub={t.nav.dest.sub} />
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -223,7 +134,7 @@ const DestinationPage = ({ t, lang, onBack }) => (
 
 const StayPage = ({ t, lang, onBack }) => (
     <div className="max-w-5xl mx-auto px-6 py-24 min-h-screen animate-fade-in">
-        <BackButton onClick={onBack} lang={lang} />
+        <BackButton  lang={lang} />
         <SectionHeader title={t.nav.stay.title} />
         <div className="grid md:grid-cols-2 gap-8">
             <div>
@@ -244,7 +155,7 @@ const StayPage = ({ t, lang, onBack }) => (
 
 const DressCodePage = ({ t, lang, onBack }) => (
     <div className="max-w-5xl mx-auto px-6 py-24 min-h-screen animate-fade-in text-center">
-        <BackButton onClick={onBack} lang={lang} />
+        <BackButton  lang={lang} />
         <SectionHeader title={t.nav.dress.title} sub={t.nav.dress.sub} />
         <p className="max-w-2xl mx-auto text-gray-600 mb-8">
             {lang === 'en'
@@ -267,7 +178,7 @@ const DressCodePage = ({ t, lang, onBack }) => (
 
 const FAQPage = ({ t, lang, onBack }) => (
     <div className="max-w-3xl mx-auto px-6 py-24 min-h-screen animate-fade-in">
-        <BackButton onClick={onBack} lang={lang} />
+        <BackButton  lang={lang} />
         <SectionHeader title={t.nav.faq.title} />
         {[
             { q: { en: "Are children invited?", pt: "Crianças são convidadas?" }, a: { en: "Adults-only event.", pt: "Evento apenas para adultos." } },
@@ -287,7 +198,7 @@ const FAQPage = ({ t, lang, onBack }) => (
 
 const TravelPage = ({ t, lang, onBack }) => (
     <div className="max-w-3xl mx-auto px-6 py-24 min-h-screen animate-fade-in text-center">
-        <BackButton onClick={onBack} lang={lang} />
+        <BackButton  lang={lang} />
         <SectionHeader title={t.nav.travel.title} />
         <div className="bg-white p-8 rounded-[20px] shadow-sm text-left">
             <div className="mb-6">
@@ -510,12 +421,12 @@ export default function WeddingApp() {
 
             <main>
                 {view === 'home' && <HomePage t={t} setView={setView} onOpenModal={() => setModalOpen(true)} />}
-                {view === 'story' && <StoryPage t={t} lang={lang} onBack={handleBack} />}
-                {view === 'dest' && <DestinationPage t={t} lang={lang} onBack={handleBack} />}
-                {view === 'stay' && <StayPage t={t} lang={lang} onBack={handleBack} />}
-                {view === 'dress' && <DressCodePage t={t} lang={lang} onBack={handleBack} />}
-                {view === 'faq' && <FAQPage t={t} lang={lang} onBack={handleBack} />}
-                {view === 'travel' && <TravelPage t={t} lang={lang} onBack={handleBack} />}
+                {view === 'story' && <StoryPage t={t} lang={lang}  />}
+                {view === 'dest' && <DestinationPage t={t} lang={lang}  />}
+                {view === 'stay' && <StayPage t={t} lang={lang}  />}
+                {view === 'dress' && <DressCodePage t={t} lang={lang}  />}
+                {view === 'faq' && <FAQPage t={t} lang={lang}  />}
+                {view === 'travel' && <TravelPage t={t} lang={lang}  />}
             </main>
 
             <Footer />
