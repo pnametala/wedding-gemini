@@ -76,7 +76,7 @@ export const CONTENT = {
         date: "19 de Setembro de 2026",
         nav: {
             story: { title: "Nossa História", sub: "Da Austrália para Bahia" },
-            stay: { title: "Hospedagem", sub: "Hotéis e Mapa" },
+            stay: { title: "Onde ficar", sub: "Hotéis e Mapa" },
             dress: { title: "Traje", sub: "Esporte Fino Tropical" },
             faq: { title: "Dúvidas", sub: "Perguntas Frequentes" },
             travel: { title: "Viagem", sub: "Voos e Dicas" },
