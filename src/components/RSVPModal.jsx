@@ -3,20 +3,32 @@ import {X} from "lucide-react";
 import {app, callGemini} from "@/pages/wedding-raissa.jsx";
 import {addDoc, collection, getFirestore} from "@firebase/firestore";
 
+class RSVPForm {
+    constructor() {
+        this.attending = ''
+        this.plusOne = 'no'
+        this.plusOneName = ''
+        this.guestName = ''
+        this.hairNeeded = ''
+        this.joiningWednesdayEvent = false
+        this.joiningThursdayEvent = false
+        this.joiningFridayEvent = false
+        this.dietaryRequirements = ''
+        this.dietaryRequirementsPlusOne = ''
+        this.message = ''
+    }
+}
+
 export const RSVPModal = ({isOpen, onClose, t, lang}) => {
     const db = getFirestore(app)
 
-    const [step, setStep] = useState('auth');
+    const [step, setStep] = useState('form');
     const [password, setPassword] = useState('');
-    const [attending, setAttending] = useState('');
-    const [plusOne, setPlusOne] = useState('no');
-    const [plusOneName, setPlusOneName] = useState('');
-    const [errorMsg, setError] = useState('');
-    const [successMsg, setSuccess] = useState('');
 
     // Form State
-    const [guestName, setGuestName] = useState('');
-    const [message, setMessage] = useState('');
+    const [form, setForm] = useState(new RSVPForm());
+    const [errorMsg, setError] = useState('');
+    const [successMsg, setSuccess] = useState('');
 
     // AI State
     const [isWishLoading, setIsWishLoading] = useState(false);
@@ -28,11 +40,17 @@ export const RSVPModal = ({isOpen, onClose, t, lang}) => {
         setSuccess("")
         try {
             const docRef = await addDoc(collection(db, "rsvp"), {
-                guest: guestName,
-                attending: attending,
-                plusOne: plusOne,
-                plusOneName: plusOneName,
-                message: message,
+                guest: form.guestName,
+                attending: form.attending,
+                plusOne: form.plusOne,
+                dietaryRequirements: form.dietaryRequirements,
+                plusOneName: form.plusOneName,
+                dietaryRequirementsPlusOne: form.dietaryRequirementsPlusOne,
+                joiningWednesdayEvent: form.joiningWednesdayEvent,
+                joiningThursdayEvent: form.joiningThursdayEvent,
+                joiningFridayEvent: form.joiningFridayEvent,
+                hairNeeded: form.hairNeeded,
+                message: form.message,
             });
             console.log("Document written with ID: ", docRef.id);
             setSuccess(lang === "en" ? "RSVP Saved Successfully" : "Presença Confirmada!")
@@ -65,11 +83,7 @@ export const RSVPModal = ({isOpen, onClose, t, lang}) => {
     };
 
     const closeForm = () => {
-        setPassword('');
-        setAttending('');
-        setPlusOne('no');
-        setGuestName('');
-        setMessage('');
+        setForm(new RSVPForm());
         if (step === 'complete') setStep('form')
         onClose();
     }
@@ -90,18 +104,18 @@ export const RSVPModal = ({isOpen, onClose, t, lang}) => {
                     </div>
                 )}
 
-                {step === 'auth' && (
-                    <div className="text-center py-8">
-                        <h3 className="font-[var(--font-heading)] text-3xl text-[var(--color-primary)] mb-6">{t.modal.title_auth}</h3>
-                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}
-                               placeholder="Password / Senha"
-                               className="w-full p-4 rounded-xl border-2 border-gray-200 bg-white mb-4 focus:outline-none focus:border-[var(--color-secondary)]"/>
-                        <button onClick={handleLogin}
-                                className="w-full bg-[var(--color-secondary)] text-white py-3 rounded-full font-bold hover:opacity-90 transition-colors">{t.modal.unlock}</button>
-                        <p className="mt-4 text-sm text-gray-400">{t.modal.hint}</p>
-                        {errorMsg !== "" && <p className="mt-4 text-sm text-red-600">{errorMsg}</p>}
-                    </div>
-                )}
+                {/*{step === 'auth' && (*/}
+                {/*    <div className="text-center py-8">*/}
+                {/*        <h3 className="font-[var(--font-heading)] text-3xl text-[var(--color-primary)] mb-6">{t.modal.title_auth}</h3>*/}
+                {/*        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}*/}
+                {/*               placeholder="Password / Senha"*/}
+                {/*               className="w-full p-4 rounded-xl border-2 border-gray-200 bg-white mb-4 focus:outline-none focus:border-[var(--color-secondary)]"/>*/}
+                {/*        <button onClick={handleLogin}*/}
+                {/*                className="w-full bg-[var(--color-secondary)] text-white py-3 rounded-full font-bold hover:opacity-90 transition-colors">{t.modal.unlock}</button>*/}
+                {/*        <p className="mt-4 text-sm text-gray-400">{t.modal.hint}</p>*/}
+                {/*        {errorMsg !== "" && <p className="mt-4 text-sm text-red-600">{errorMsg}</p>}*/}
+                {/*    </div>*/}
+                {/*)}*/}
                 {step === 'form' && (
                     <div className="text-center py-4">
                         <h3 className="font-[var(--font-heading)] text-3xl text-[var(--color-primary)] mb-6">{t.modal.title_form}</h3>
@@ -109,8 +123,8 @@ export const RSVPModal = ({isOpen, onClose, t, lang}) => {
                             <div>
                                 <label
                                     className="block font-bold text-[var(--color-primary)] mb-1">{t.modal.name}</label>
-                                <input required type="text" value={guestName}
-                                       onChange={(e) => setGuestName(e.target.value)}
+                                <input required type="text" value={form.guestName}
+                                       onChange={(e) => setForm({...form, guestName: e.target.value})}
                                        className="w-full p-3 rounded-xl border-2 border-gray-200 bg-white"/>
                             </div>
 
@@ -118,8 +132,8 @@ export const RSVPModal = ({isOpen, onClose, t, lang}) => {
                                 <label
                                     className="block font-bold text-[var(--color-primary)] mb-1">{t.modal.attending}</label>
                                 <select
-                                    value={attending}
-                                    onChange={(e) => setAttending(e.target.value)}
+                                    value={form.attending}
+                                    onChange={(e) => setForm({...form, attending: e.target.value})}
                                     className="w-full p-3 rounded-xl border-2 border-gray-200 bg-white"
                                 >
                                     <option value="" disabled>Select / Selecione</option>
@@ -128,14 +142,21 @@ export const RSVPModal = ({isOpen, onClose, t, lang}) => {
                                 </select>
                             </div>
 
-                            {attending === 'yes' && (
+                            {form.attending === 'yes' && (
                                 <>
+                                    <div>
+                                        <label
+                                            className="block font-bold text-[var(--color-primary)] mb-1">{t.modal.dietary}</label>
+                                        <input required type="text" value={form.dietaryRequirements}
+                                               onChange={(e) => setForm({...form, dietaryRequirements: e.target.value})}
+                                               className="w-full p-3 rounded-xl border-2 border-gray-200 bg-white"/>
+                                    </div>
                                     <div>
                                         <label
                                             className="block font-bold text-[var(--color-primary)] mb-1">{t.modal.plus_one}</label>
                                         <select
-                                            value={plusOne}
-                                            onChange={(e) => setPlusOne(e.target.value)}
+                                            value={form.plusOne}
+                                            onChange={(e) => setForm({...form, plusOne: e.target.value})}
                                             className="w-full p-3 rounded-xl border-2 border-gray-200 bg-white"
                                         >
                                             <option value="no">{t.modal.noPlusOne}</option>
@@ -143,16 +164,77 @@ export const RSVPModal = ({isOpen, onClose, t, lang}) => {
                                         </select>
                                     </div>
 
-                                    {plusOne === 'yes' && (
-                                        <div>
-                                            <label
-                                                className="block font-bold text-[var(--color-primary)] mb-1">{t.modal.plus_one_name}</label>
-                                            <input required type="text"
-                                                   className="w-full p-3 rounded-xl border-2 border-gray-200 bg-white"
-                                                   onChange={(e) => setPlusOneName(e.target.value)} value={plusOneName}
-                                                   placeholder="Name / Nome"/>
-                                        </div>
+                                    {form.plusOne === 'yes' && (
+                                        <>
+                                            <div>
+                                                <label
+                                                    className="block font-bold text-[var(--color-primary)] mb-1">{t.modal.plus_one_name}</label>
+                                                <input required type="text"
+                                                       className="w-full p-3 rounded-xl border-2 border-gray-200 bg-white"
+                                                       onChange={(e) => setForm({
+                                                           ...form,
+                                                           plusOneNames: e.target.value
+                                                       })}
+                                                       value={form.plusOneName}
+                                                       placeholder={t.modal.name}/>
+                                            </div>
+                                            <div>
+                                                <label
+                                                    className="block font-bold text-[var(--color-primary)] mb-1">{t.modal.dietaryPlusOne}</label>
+                                                <input required type="text" value={form.dietaryRequirementsPlusOne}
+                                                       onChange={(e) => setForm({...form, dietaryRequirementsPlusOne: e.target.value})}
+                                                       className="w-full p-3 rounded-xl border-2 border-gray-200 bg-white"/>
+                                            </div>
+                                        </>
                                     )}
+                                    <div className="flex justify-center items-center">
+                                        <label
+                                            className="block font-bold text-[var(--color-primary)] mb-1 w-full">{t.modal.hairNeeded}</label>
+                                        <input type="checkbox"
+                                               className="w-full border-2 border-gray-200 bg-white"
+                                               onChange={(e) => setForm({...form, hairNeeded: e.target.checked})}
+                                               checked={form.hairNeeded}
+                                        />
+                                    </div>
+
+                                    {/*Attending extra events?*/}
+                                    <div className="flex justify-center items-center">
+                                        <label
+                                            className="block font-bold text-[var(--color-primary)] mb-1 w-full">{t.modal.joiningWednesdayEvent}</label>
+                                        <input type="checkbox"
+                                               className="w-full border-2 border-gray-200 bg-white"
+                                               onChange={(e) => setForm({
+                                                   ...form,
+                                                   joiningWednesdayEvent: e.target.checked
+                                               })}
+                                               checked={form.joiningWednesdayEvent}
+                                        />
+                                    </div>
+                                    <div className="flex justify-center items-center">
+                                        <label
+                                            className="block font-bold text-[var(--color-primary)] mb-1 w-full">{t.modal.joiningThursdayEvent}</label>
+                                        <input type="checkbox"
+                                               className="w-full border-2 border-gray-200 bg-white"
+                                               onChange={(e) => setForm({
+                                                   ...form,
+                                                   joiningThursdayEvent: e.target.checked
+                                               })}
+                                               checked={form.joiningThursdayEvent}
+                                        />
+                                    </div>
+                                    <div className="flex justify-center items-center">
+                                        <label
+                                            className="block font-bold text-[var(--color-primary)] mb-1 w-full">{t.modal.joiningFridayEvent}</label>
+                                        <input type="checkbox"
+                                               className="w-full border-2 border-gray-200 bg-white"
+                                               onChange={(e) => setForm({
+                                                   ...form,
+                                                   joiningFridayEvent: e.target.checked
+                                               })}
+                                               checked={form.joiningFridayEvent}
+                                        />
+                                    </div>
+
 
                                     {/*<div>*/}
                                     {/*    <label*/}
@@ -178,8 +260,8 @@ export const RSVPModal = ({isOpen, onClose, t, lang}) => {
                                     {/*</button>*/}
                                 </div>
                                 <textarea
-                                    value={message}
-                                    onChange={(e) => setMessage(e.target.value)}
+                                    value={form.message}
+                                    onChange={(e) => setForm({...form, message: e.target.value})}
                                     className="w-full p-3 rounded-xl border-2 border-gray-200 bg-white focus:border-[var(--color-secondary)] focus:outline-none transition-all"
                                     rows="3"
                                 ></textarea>

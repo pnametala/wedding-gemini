@@ -42,6 +42,7 @@ export const CONTENT = {
             plus_one: "Bringing a +1?",
             plus_one_name: "Name of +1",
             dietary: "Dietary Requirements",
+            dietaryPlusOne: "Dietary Requirements (+1)",
             message: "Message (Optional)",
             ai_wish_btn: "✨ Draft a Wish",
             ai_wish_loading: "Dreaming up words...",
@@ -49,6 +50,10 @@ export const CONTENT = {
             noAttend: "Sadly, no",
             yesPlusOne: "Yes, I'm bringing a +1!",
             noPlusOne: "No",
+            hairNeeded: "Hairline needed?",
+            joiningWednesdayEvent: "Joining Wednesday?",
+            joiningThursdayEvent: "Joining Thursday?",
+            joiningFridayEvent: "Joining Friday?",
             submit: "Send RSVP"
         },
         ai_guide: {
@@ -116,6 +121,7 @@ export const CONTENT = {
             plus_one: "Levará acompanhante (+1)?",
             plus_one_name: "Nome do Acompanhante",
             dietary: "Restrições Alimentares",
+            dietaryPlusOne: "Restrições Alimentares (Acompanhante)",
             message: "Mensagem (Opcional)",
             ai_wish_btn: "✨ Criar Mensagem",
             ai_wish_loading: "Escrevendo...",
@@ -123,6 +129,10 @@ export const CONTENT = {
             noAttend: "Infelizmente não",
             yesPlusOne: "Sim",
             noPlusOne: "Não",
+            hairNeeded: "Precisa fazer cabelo?",
+            joiningWednesdayEvent: "Participará do evento na Quarta-Feira?",
+            joiningThursdayEvent: "Participará do evento na Quinta-Feira??",
+            joiningFridayEvent: "Participará do evento na Sexta-Feira??",
             submit: "Enviar Confirmação"
         },
         ai_guide: {
