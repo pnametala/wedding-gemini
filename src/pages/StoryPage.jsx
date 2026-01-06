@@ -9,21 +9,19 @@ export const StoryPage = ({ t, lang }) => (
         <SectionHeader title={t.nav.story.title} sub={t.nav.story.sub} />
         <div className="max-w-2xl mx-auto border-l-2 border-[var(--color-secondary)] pl-8 text-left space-y-12 relative">
             {[
-                { year: '2016', title: { en: "From work colleagues to lovers - or was it before?", pt: "De colegas de trabalho à namorados (ou será que foi antes?)" }, desc: { en: "A sunny afternoon at Bondi Beach changed everything.", pt: "Uma tarde ensolarada em Bondi mudou tudo." } },
-                { year: '2017', title: { en: "The big move!", pt: "A grande mudança!" }, desc: { en: "Under the stars in Porto Seguro.", pt: "Sob as estrelas em Porto Seguro." } },
-                { year: '2018', title: { en: "The first trips", pt: "As primeiras viagens!" }, desc: { en: "Under the stars in Porto Seguro.", pt: "Sob as estrelas em Porto Seguro." } },
-                { year: '2019', title: { en: "xxx", pt: "xxx" }, desc: { en: "Our biggest adventure yet!", pt: "Nossa maior aventura!" }, color: true },
-                { year: '2020', title: { en: "Lockdown", pt: "A bolha da Australia" }, desc: { en: "Our biggest adventure yet!", pt: "Nossa maior aventura!" }, color: true },
-                { year: '2021', title: { en: "Our first home!", pt: "Nosso cantinho" }, desc: { en: "Our biggest adventure yet!", pt: "Nossa maior aventura!" }, color: true },
-                { year: '2022', title: { en: "Love for Disney!", pt: "Amor pela Disney!" }, desc: { en: "Our biggest adventure yet!", pt: "Nossa maior aventura!" }, color: true },
-                { year: '2023', title: { en: "Frozen Hearts", pt: "Coração de gelo!" }, desc: { en: "Our biggest adventure yet!", pt: "Nossa maior aventura!" }, color: true },
-                { year: '2024', title: { en: "The Proposal!", pt: "O Pedido :)" }, desc: { en: "Our biggest adventure yet!", pt: "Nossa maior aventura!" }, color: true },
-                { year: '2025', title: { en: "Planning & Trips", pt: "Viajando e Planejando" }, desc: { en: "Our biggest adventure yet!", pt: "Nossa maior aventura!" }, color: true },
-                { year: '2026', title: { en: "The Wedding!", pt: "O Casamento" }, desc: { en: "Our biggest adventure yet!", pt: "Nossa maior aventura!" }, color: true }
+                { year: { en: t.story[0].year, pt: t.story[0].year}, title: { en: t.story[0].title, pt: t.story[0].title}, desc: { en: t.story[0].title, pt: t.story[0].title} },
+                { year: { en: t.story[1].year, pt: t.story[1].year}, title: { en: t.story[1].title, pt: t.story[1].title}, desc: { en: t.story[1].title, pt: t.story[1].title} },
+                { year: { en: t.story[2].year, pt: t.story[2].year}, title: { en: t.story[2].title, pt: t.story[2].title}, desc: { en: t.story[2].title, pt: t.story[2].title} },
+                { year: { en: t.story[3].year, pt: t.story[3].year}, title: { en: t.story[3].title, pt: t.story[3].title}, desc: { en: t.story[3].title, pt: t.story[3].title} },
+                { year: { en: t.story[4].year, pt: t.story[4].year}, title: { en: t.story[4].title, pt: t.story[4].title}, desc: { en: t.story[4].title, pt: t.story[4].title} },
+                { year: { en: t.story[5].year, pt: t.story[5].year}, title: { en: t.story[5].title, pt: t.story[5].title}, desc: { en: t.story[5].title, pt: t.story[5].title} },
+                { year: { en: t.story[6].year, pt: t.story[6].year}, title: { en: t.story[6].title, pt: t.story[6].title}, desc: { en: t.story[6].title, pt: t.story[6].title} },
+                { year: { en: t.story[7].year, pt: t.story[7].year}, title: { en: t.story[7].title, pt: t.story[7].title}, desc: { en: t.story[7].title, pt: t.story[7].title} },
+                { year: { en: t.story[8].year, pt: t.story[8].year}, title: { en: t.story[8].title, pt: t.story[8].title}, desc: { en: t.story[8].title, pt: t.story[8].title} }
             ].map((item, idx) => (
                 <div key={idx} className="relative">
                     <div className="absolute -left-[41px] top-1 w-4 h-4 bg-[var(--color-bg)] border-2 border-[var(--color-primary)] rounded-full"></div>
-                    <div className={`font-[var(--font-heading)] text-3xl font-bold mb-2 ${item.color ? 'text-[var(--color-primary)]' : 'text-[var(--color-secondary)]'}`}>{item.year}</div>
+                    <div className={`font-[var(--font-heading)] text-3xl font-bold mb-2 ${item.color ? 'text-[var(--color-primary)]' : 'text-[var(--color-secondary)]'}`}>{item.year[lang]}</div>
                     <div className="bg-white p-6 rounded-[20px] shadow-sm">
                         <h4 className="text-xl font-bold mb-2">{item.title[lang]}</h4>
                         <p className="text-gray-600 mb-4">{item.desc[lang]}</p>

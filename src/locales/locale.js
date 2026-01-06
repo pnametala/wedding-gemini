@@ -4,7 +4,7 @@ export const CONTENT = {
         subtitle: "Porto Seguro - Bahia - Brazil",
         date: "19th September 2026",
         nav: {
-            story: { title: "Our Story", sub: "From Australia to Bahia" },
+            story: { title: "Our Story", sub: "Love across oceans!" },
             stay: { title: "Where to Stay", sub: "Hotels & Map" },
             dress: { title: "Dress Code", sub: "Tropical Formal" },
             faq: { title: "FAQ", sub: "Questions & Answers" },
@@ -57,7 +57,18 @@ export const CONTENT = {
             btn: "Ask Gemini",
             loading: "Consulting the locals...",
             intro: "Need a tip for Trancoso or Porto Seguro? Ask our AI expert!"
-        }
+        },
+        story: [
+            { year: "Nov-2016", title: "Café da manhã dos campeões!", desc: "Encontre-nos na praia para relaxar depois."},
+            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."},
+            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."},
+            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."},
+            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."},
+            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."},
+            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."},
+            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."},
+            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."}
+        ]
     },
     pt: {
         rsvp_btn: "Confirmar Presença",
@@ -120,6 +131,19 @@ export const CONTENT = {
             btn: "Perguntar Gemini",
             loading: "Consultando os locais...",
             intro: "Precisa de uma dica sobre Trancoso ou Porto Seguro? Pergunte à nossa IA!"
-        }
+        },
+        story: [
+            { year: "2016", title: "Quem precisa de tinder quando se tem a porta da rua?", desc: "Quem diria que um encontro casual às 8 da manha em frente ao prédio da Raissa em Niterói, seria o início de tudo? Entre as idas e vindas de barca de Niterói para o Rio, com conversas sobre festas e danças, combinada com mensagens interminaveis a noite sobre series e 'trabalho', acabamos aos poucos (ou muito rapido) encontramos mais coisas em comum do que inicialmente imaginavamos. Terminamos o ano oficializando um namoro, com uma viagem entre amigos e um desafio: o Pedro estava de malas prontas para a Austrália.."},
+            { year: "2017", title: "Todos os caminhos levam à Perth", desc: "O plano (meio louco) era um namoro à distância (com apenas 2 meses de namoro), mas o destino tinha outros planos. Apenas 6 semanas depois do Pedro decolar, a Raissa também aterrissou na Austrália! Foi o ano mais intenso: novos desafios, saudades de casa, ainda nos conhecendo como casal, mas sempre saíamos mais fortes e conectados com cada desafio. Em dezembro, montamos nosso primeiro  oficial."},
+            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."},
+            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."},
+            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."},
+            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."},
+            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."},
+            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."},
+            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."}
+        ]
+        
+        
     }
 };
