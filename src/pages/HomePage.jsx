@@ -2,6 +2,7 @@ import {useState} from "react";
 import {NavCard} from "@/components/NavCard.jsx";
 import {EventCard} from "@/components/EventCard.jsx";
 import {MapPin} from "lucide-react";
+import {Link} from "react-router-dom";
 
 export const HomePage = ({t, onOpenModal}) => {
     const [itineraryTab, setItineraryTab] = useState('wed');
@@ -27,10 +28,10 @@ export const HomePage = ({t, onOpenModal}) => {
                             className="cinzel font-[var(--font-heading)] text-xl md:text-4xl font-bold text-[var(--color-primary)] tracking-widest">{t.date}</span>
                     </div>
                     <br/>
-                    <button onClick={onOpenModal}
+                    <Link to="/rsvp"
                             className="bg-[var(--color-secondary)] text-white px-8 py-3 rounded-full font-[var(--font-heading)] font-bold tracking-widest border border-[var(--color-secondary)] hover:bg-[#d65b38] hover:-translate-y-1 hover:shadow-lg transition-all">
                         {t.rsvp_btn}
-                    </button>
+                    </Link>
                 </div>
             </section>
 
@@ -39,15 +40,15 @@ export const HomePage = ({t, onOpenModal}) => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
                     <NavCard title={t.nav.story.title} sub={t.nav.story.sub} goTo={'story'}
                              colorVar="primary"/>
-                    <NavCard title={t.nav.stay.title} sub={t.nav.stay.sub} goTo={'stay'}
+                    <NavCard title={t.nav.dest.title} sub={t.nav.dest.sub} goTo={'why-ps'}
                              colorVar="secondary"/>
-                    <NavCard title={t.nav.dress.title} sub={t.nav.dress.sub} goTo={'dress'}
+                    <NavCard title={t.nav.stay.title} sub={t.nav.stay.sub} goTo={'stay'}
                              colorVar="highlight"/>
-                    <NavCard title={t.nav.faq.title} sub={t.nav.faq.sub} goTo={'faq'}
+                    <NavCard title={t.nav.dress.title} sub={t.nav.dress.sub} goTo={'dress'}
                              colorVar="muted"/>
-                    <NavCard title={t.nav.travel.title} sub={t.nav.travel.sub} goTo={'travel'}
+                    <NavCard title={t.nav.faq.title} sub={t.nav.faq.sub} goTo={'faq'}
                              colorVar="accent"/>
-                    <NavCard title={t.nav.dest.title} sub={t.nav.dest.sub} goTo={'dest'}
+                    <NavCard title={t.nav.travel.title} sub={t.nav.travel.sub} goTo={'travel'}
                              colorVar="primary"/>
                 </div>
             </div>

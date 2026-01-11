@@ -3,13 +3,14 @@ export const CONTENT = {
         rsvp_btn: "Confirm Presence",
         subtitle: "Porto Seguro - Bahia - Brazil",
         date: "19th September 2026",
+        backBtn: "Back",
         nav: {
             story: { title: "Our Story", sub: "Love across oceans!" },
             stay: { title: "Where to Stay", sub: "Hotels & Map" },
             dress: { title: "Dress Code", sub: "Tropical Formal" },
             faq: { title: "FAQ", sub: "Questions & Answers" },
             travel: { title: "Travel", sub: "Flights & Tips" },
-            dest: { title: "The Destination", sub: "Discover Bahia" }
+            dest: { title: "Why Porto Seguro?", sub: "Discover Bahia" }
         },
         itinerary: {
             title: "The Lineup",
@@ -51,9 +52,9 @@ export const CONTENT = {
             yesPlusOne: "Yes, I'm bringing a +1!",
             noPlusOne: "No",
             hairNeeded: "Hairline needed?",
-            joiningWednesdayEvent: "Joining Wednesday?",
-            joiningThursdayEvent: "Joining Thursday?",
-            joiningFridayEvent: "Joining Friday?",
+            joiningWednesdayEvent: "Are you joining us for Dinner? (16/09)",
+            joiningThursdayEvent: "Are you joining us for Axe Mói? (17/09)",
+            joiningFridayEvent: "Are you joining us for BeachDay/Pre-Drinks? (18/09)",
             submit: "Send RSVP"
         },
         ai_guide: {
@@ -79,13 +80,14 @@ export const CONTENT = {
         rsvp_btn: "Confirmar Presença",
         subtitle: "Porto Seguro - Bahia - Brasil",
         date: "19 de Setembro de 2026",
+        backBtn: "Voltar",
         nav: {
             story: { title: "Nossa História", sub: "Da Austrália para Bahia" },
             stay: { title: "Onde ficar", sub: "Hotéis e Mapa" },
             dress: { title: "Traje", sub: "Esporte Fino Tropical" },
             faq: { title: "Dúvidas", sub: "Perguntas Frequentes" },
             travel: { title: "Viagem", sub: "Voos e Dicas" },
-            dest: { title: "O Destino", sub: "Descubra a Bahia" }
+            dest: { title: "Porto Seguro", sub: "Descubra o por quê" }
         },
         itinerary: {
             title: "O Lineup",
@@ -130,9 +132,9 @@ export const CONTENT = {
             yesPlusOne: "Sim",
             noPlusOne: "Não",
             hairNeeded: "Precisa fazer cabelo?",
-            joiningWednesdayEvent: "Participará do evento na Quarta-Feira?",
-            joiningThursdayEvent: "Participará do evento na Quinta-Feira??",
-            joiningFridayEvent: "Participará do evento na Sexta-Feira??",
+            joiningWednesdayEvent: "Você pretende ir no Jantar? (16/09)",
+            joiningThursdayEvent: "Você pretende ir no dia de Axe Mói? (17/09)",
+            joiningFridayEvent: "Você pretende ir no BeachDay/Pré? (18/09)",
             submit: "Enviar Confirmação"
         },
         ai_guide: {
@@ -143,17 +145,16 @@ export const CONTENT = {
             intro: "Precisa de uma dica sobre Trancoso ou Porto Seguro? Pergunte à nossa IA!"
         },
         story: [
-            { year: "2016", title: "Quem precisa de tinder quando se tem a porta da rua?", desc: "Quem diria que um encontro casual às 8 da manha em frente ao prédio da Raissa em Niterói, seria o início de tudo? Entre as idas e vindas de barca de Niterói para o Rio, com conversas sobre festas e danças, combinada com mensagens interminaveis a noite sobre series e 'trabalho', acabamos aos poucos (ou muito rapido) encontramos mais coisas em comum do que inicialmente imaginavamos. Terminamos o ano oficializando um namoro, com uma viagem entre amigos e um desafio: o Pedro estava de malas prontas para a Austrália.."},
-            { year: "2017", title: "Todos os caminhos levam à Perth", desc: "O plano (meio louco) era um namoro à distância (com apenas 2 meses de namoro), mas o destino tinha outros planos. Apenas 6 semanas depois do Pedro decolar, a Raissa também aterrissou na Austrália! Foi o ano mais intenso: novos desafios, saudades de casa, ainda nos conhecendo como casal, mas sempre saíamos mais fortes e conectados com cada desafio. Em dezembro, montamos nosso primeiro  oficial."},
-            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."},
-            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."},
-            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."},
-            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."},
-            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."},
-            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."},
-            { year: "Mar-2017", title: "Banho de mar de despedia", desc: "Encontre-nos na praia para curtir um ultimo dia do mar quentinho da Bahia."}
+            { year: "2016", title: "Primeiro encontro à moda antiga", desc: `Quem diria que um encontro casual às 8 da manhã em frente ao prédio da Raissa, em Niterói, seria o início de tudo? Pedro indo para um evento da empresa, enquanto Raissa voltava de uma choppada! Empresa essa que Raissa entrou alguns meses depois, e mais oficialmente conheceu Pedro, que por coincidência (ou não) também morava em Niterói e fazia um caminho similar para voltar para casa. Entre idas e vindas de barca para o Rio, conversas sobre festas e mensagens intermináveis sobre dança, séries e "trabalho", descobriram muito mais em comum do que imaginávamos. Terminamos o ano oficializando o namoro com uma viagem entre amigos e um baita desafio: o Pedro estava de malas prontas para a Austrália.`},
+            { year: "2017", title: "Todos os caminhos levam a Perth", desc: `O plano (meio louco) era um namoro à distância com apenas dois meses de relação, mas o destino deu seus empurrões. Apenas 6 semanas após o Pedro decolar, a Raissa também aterrissou na Austrália! Foi um ano intenso: novos desafios, saudades de casa e o aprendizado de nos conhecermos como casal em um novo país, mas sempre saímos mais fortes e conectados com cada desafio.`},
+            { year: "2018/2019", title: "Explorando Austrália e arredores", desc: `Curtimos ao máximo a emoção dos primeiros anos de imigrantes. Foram tempos de viagens de carro com amigos, acampamentos com barracas de 20 dólares, passeios inesquecíveis nos finais de semana e, claro, inúmeras visitas à bottleshop e à loja de kebab. Entre idas à Ásia e desafios de exercícios, fomos criando nossa base e colecionando as primeiras grandes memórias internacionais.`},
+            { year: "2020", title: "Isolados, mas no paraíso", desc: `Com a pandemia, Perth fechou suas fronteiras e o mundo parou. Tivemos a sorte de que por conta das restrições geográficas, formou-se uma bolha ao redor do estado, em que uma vida relativamente normal era possível, dentro dos anos difíceis de pandemia ao redor do mundo. Sem a opção de sair do estado, aprendemos a encontrar a felicidade no que estava ao nosso alcance. Somos muito gratos por esse tempo, pois foi nele que fizemos amigos que se tornaram nossa verdadeira família australiana. Nossa rede de apoio se transformou em laços para a vida toda.`},
+            { year: "2021", title: "Nossa casinha", desc: `Depois de muuuuitas conversas, análises, buscas online, (mas apenas três visitas) achamos a nossa casa perfeita - assim que entramos, já sabíamos que era ela! Comprar nossa casa foi um dos maiores marcos da nossa jornada, como casal, mas de realização pessoal. Pode parecer bobagem, mas poder furar uma parede ou armar uma rede na varanda para descansar depois do almoço — bem ao estilo brasileiro — é uma liberdade que só quem viveu o rigor dos aluguéis na Austrália consegue entender. Além, é claro, de ter um cantinho no mundo pra chamar de seu.`},
+            { year: "2022", title: "Onde os sonhos se realizam", desc: `Foi a hora de apresentar o maravilhoso mundo da Disney para o Pedro, que já tinha o sonho de conhecer (talvez só não imaginava que esse sonho se realizaria com a sogra a tiracolo!). Vivemos momentos mágicos em família e revendo amigos queridos da nossa época de Niterói. Gostamos tanto da experiência que virou regra: não passamos mais de dois anos sem visitar um novo parque. Mal sabíamos que esse cenário seria o palco de um momento ainda maior.`},
+            { year: "2023", title: "Exploradores do mundo", desc: `Depois daquele gostinho, o espírito explorador voltou a falar bem alto. Foram anos de desbravar países que antes nem pensamos em visitar, como Malásia, Indonesia, Islândia, Vietnã, China, Singapura e Sri Lanka. Entre um carimbo e outro no passaporte, a Raissa descobriu que o humor do Pedro em viagens é imbatível: ele simplesmente topa qualquer coisa com um sorriso no rosto (e muita disposição!). (…Tanto que até topou um pedido em casamento! ;P`},
+            { year: "2024", title: `O "sim" mais esperado`, desc: `Numa manhã de correria, porque japoneses chegam no parque às 6am, Pedro simplesmente congelou na porta do hotel. Raissa sem paciência foi e passou por ele “anda Pedro, vamos nos atrasar”, até que recebeu um abraço inesperado, com as mãos trêmulas e uma voz rouca. Ansiosa que só, Raissa falou “sim” mas nem sabe que pergunta foi feita (na expectativa de que era a que ela mais esperava)! O dia foi mágico pelos parques da Disney de Tóquio, entre ligações, milhões de fotos e o início de planos que começaram a se formar para o grande dia.`},
+            { year: "2026", title: "O Grande Dia!", desc: `Dez anos depois daquele primeiro encontro em Niterói, aqui estamos nós. O casamento sempre foi um sonho, não só pelo simbolismo e a festa, mas pela oportunidade de celebrar e colocar todas as pessoas que fizeram parte da nossa história em um só lugar. 
+Conseguir juntar todas essas raízes e pedaços de nós que foram espalhados através de diferentes estados, países e oceanos é um sentimento inexplicável. Mal podemos esperar para recarregar as energias e continuar escrevendo novos capítulos juntos — e com vocês ao nosso lado!`}
         ]
-        
-        
     }
 };

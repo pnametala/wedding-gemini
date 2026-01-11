@@ -1,11 +1,13 @@
-import {useLottie} from "lottie-react";
+import {useLocation} from "react-router-dom";
 
 export const Header = ({isScrolled, lang, setLang, t, setModalOpen, setView}) => {
+    const location = useLocation();
+    const isLandingPage = location.pathname === '/';
 
     return (
         <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 flex justify-between items-center px-6 py-3
-    ${isScrolled ? 'translate-y-0 shadow-md rounded-b-[20px] backdrop-blur-sm' : '-translate-y-full bg-transparent'}`}
-                style={{backgroundColor: isScrolled ? 'rgba(46, 74, 61, 0.95)' : 'transparent'}}
+    ${isScrolled || !isLandingPage ? 'translate-y-0 shadow-md rounded-b-[20px] backdrop-blur-sm' : '-translate-y-full bg-transparent'}`}
+                style={{backgroundColor: isScrolled || !isLandingPage ? 'rgba(46, 74, 61, 0.95)' : 'transparent'}}
         >
             <div
                 onClick={() => {

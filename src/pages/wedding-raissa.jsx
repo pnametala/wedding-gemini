@@ -15,6 +15,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import fitasAnimation from "@/lottie/fitas.json";
 import {useLottie} from "lottie-react";
 import {initializeApp} from "@firebase/app";
+import {RSVPPage} from "@/pages/RSVPPage.jsx";
 
 /* --- GEMINI API UTILITIES --- */
 
@@ -108,24 +109,24 @@ export default function RaissaApp() {
           --font-body: 'Montserrat', sans-serif;
         }
       `}</style>
+            <BrowserRouter>
+                <Header isScrolled={isScrolled} lang={lang} setLang={setLang} t={t} setModalOpen={setModalOpen}/>
 
-            <Header isScrolled={isScrolled} lang={lang} setLang={setLang} t={t} setModalOpen={setModalOpen}/>
-
-            <div className={'absolute top-0 right-0 pr-5 w-96'}>{View}</div>
-            <main>
-                <BrowserRouter>
+                <div className={'absolute top-0 right-0 pr-5 w-96'}>{View}</div>
+                <main>
                     <Routes>
                         <Route path="/"
                                element={<HomePage t={t} onOpenModal={() => setModalOpen(true)}/>}/>
                         <Route path="story" element={<StoryPage t={t} lang={lang}/>}/>
-                        <Route path="dest" element={<DestinationPage t={t} lang={lang}/>}/>
+                        <Route path="why-ps" element={<DestinationPage t={t} lang={lang}/>}/>
                         <Route path="stay" element={<StayPage t={t} lang={lang}/>}/>
                         <Route path="dress" element={<DressCodePage t={t} lang={lang}/>}/>
                         <Route path="faq" element={<FAQPage t={t} lang={lang}/>}/>
                         <Route path="travel" element={<TravelPage t={t} lang={lang}/>}/>
+                        <Route path="rsvp" element={<RSVPPage t={t} lang={lang}/>}/>
                     </Routes>
-                </BrowserRouter>
-            </main>
+                </main>
+            </BrowserRouter>
 
             <Footer/>
             <RSVPModal isOpen={modalOpen} onClose={() => setModalOpen(false)} t={t} lang={lang}/>

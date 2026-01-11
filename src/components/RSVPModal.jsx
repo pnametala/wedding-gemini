@@ -92,7 +92,7 @@ export const RSVPModal = ({isOpen, onClose, t, lang}) => {
         <div
             className="fixed inset-0 bg-[var(--color-primary)]/90 backdrop-blur-sm z-[100] flex justify-center items-center p-4 animate-[fade-in_1s_ease-out] overflow-y-auto">
             <div
-                className="bg-[var(--color-surface)] w-full max-w-lg rounded-[25px] border-4 border-[var(--color-primary)] shadow-[15px_15px_0_var(--color-secondary)] p-6 md:p-8 relative my-8">
+                className="bg-[var(--color-surface)] w-full max-w-2xl rounded-[25px] border-4 border-[var(--color-primary)] shadow-[15px_15px_0_var(--color-secondary)] p-6 md:p-8 relative my-8">
                 <button onClick={closeForm}
                         className="absolute top-4 right-4 text-[var(--color-primary)] hover:text-[var(--color-secondary)] hover:rotate-90 transition-all">
                     <X size={32}/>
@@ -187,22 +187,22 @@ export const RSVPModal = ({isOpen, onClose, t, lang}) => {
                                             </div>
                                         </>
                                     )}
-                                    <div className="flex justify-center items-center">
+                                    <div className="flex justify-between items-center pr-1">
                                         <label
                                             className="block font-bold text-[var(--color-primary)] mb-1 w-full">{t.modal.hairNeeded}</label>
                                         <input type="checkbox"
-                                               className="w-full border-2 border-gray-200 bg-white"
+                                               className="border-2 border-gray-200 bg-white"
                                                onChange={(e) => setForm({...form, hairNeeded: e.target.checked})}
                                                checked={form.hairNeeded}
                                         />
                                     </div>
 
                                     {/*Attending extra events?*/}
-                                    <div className="flex justify-center items-center">
+                                    <div className="flex justify-between items-center pr-1">
                                         <label
-                                            className="block font-bold text-[var(--color-primary)] mb-1 w-full">{t.modal.joiningWednesdayEvent}</label>
+                                            className="block font-bold text-[var(--color-primary)] mb-1">{t.modal.joiningWednesdayEvent}</label>
                                         <input type="checkbox"
-                                               className="w-full border-2 border-gray-200 bg-white"
+                                               className="border-2 border-gray-200 bg-white"
                                                onChange={(e) => setForm({
                                                    ...form,
                                                    joiningWednesdayEvent: e.target.checked
@@ -210,11 +210,11 @@ export const RSVPModal = ({isOpen, onClose, t, lang}) => {
                                                checked={form.joiningWednesdayEvent}
                                         />
                                     </div>
-                                    <div className="flex justify-center items-center">
+                                    <div className="flex justify-between items-center pr-1">
                                         <label
-                                            className="block font-bold text-[var(--color-primary)] mb-1 w-full">{t.modal.joiningThursdayEvent}</label>
+                                            className="block font-bold text-[var(--color-primary)] mb-1">{t.modal.joiningThursdayEvent}</label>
                                         <input type="checkbox"
-                                               className="w-full border-2 border-gray-200 bg-white"
+                                               className="border-2 border-gray-200 bg-white"
                                                onChange={(e) => setForm({
                                                    ...form,
                                                    joiningThursdayEvent: e.target.checked
@@ -222,11 +222,11 @@ export const RSVPModal = ({isOpen, onClose, t, lang}) => {
                                                checked={form.joiningThursdayEvent}
                                         />
                                     </div>
-                                    <div className="flex justify-center items-center">
+                                    <div className="flex justify-between items-center pr-1">
                                         <label
-                                            className="block font-bold text-[var(--color-primary)] mb-1 w-full">{t.modal.joiningFridayEvent}</label>
+                                            className="block font-bold text-[var(--color-primary)] mb-1">{t.modal.joiningFridayEvent}</label>
                                         <input type="checkbox"
-                                               className="w-full border-2 border-gray-200 bg-white"
+                                               className="border-2 border-gray-200 bg-white"
                                                onChange={(e) => setForm({
                                                    ...form,
                                                    joiningFridayEvent: e.target.checked
