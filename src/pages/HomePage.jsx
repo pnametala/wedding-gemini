@@ -57,7 +57,7 @@ export const HomePage = ({t, onOpenModal}) => {
             <section
                 className="py-24 px-4 bg-[var(--color-bg)] text-center bg-[image:radial-gradient(var(--color-muted)_1px,transparent_1px)] bg-[length:40px_40px]">
                 <h2 className="font-[var(--font-heading)] text-4xl md:text-5xl text-[var(--color-primary)] mb-2">{t.itinerary.title}</h2>
-                <p className="font-[var(--font-script)] text-3xl md:text-4xl text-[var(--color-highlight)] mb-12 -rotate-2 inline-block">{t.itinerary.sub}</p>
+                <p className="font-[var(--font-script)] text-2xl md:text-1xl text-[var(--color-highlight)] mb-12 inline-block">{t.itinerary.sub}</p>
 
                 <div className="flex flex-wrap justify-center gap-4 mb-16">
                     {['pre', 'wed', 'post'].map((key, idx) => (

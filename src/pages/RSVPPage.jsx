@@ -107,6 +107,8 @@ export const RSVPPage = ({t, lang}) => {
             {step === 'form' && (
                 <div className="text-center py-4">
                     <h3 className="font-[var(--font-heading)] text-3xl text-[var(--color-primary)] mb-6">{t.modal.title_form}</h3>
+                    <p className="text-[var(--color-primary)] mb-6">{t.modal.sub_form}</p>
+
                     <form onSubmit={handleSubmit} className="text-left space-y-4">
                         <div>
                             <label
