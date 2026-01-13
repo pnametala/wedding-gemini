@@ -17,7 +17,7 @@ export const TravelPage = ({ t, lang }) => (
             <div>
                 <h3 className="text-xl font-bold text-[var(--color-secondary)] mb-2 flex items-center gap-2"><MapPin className="w-5 h-5" /> Transfers</h3>
                 <p className="text-gray-600">
-                    {lang === 'en' ? "We recommend booking a private transfer or rental car." : "Recomendamos transfer privado ou aluguel de carro."}
+                    {lang === 'en' ? "We recommend booking a private transfer or rental car." : "Para os que vão ficar muitos dias, aluguél de carro pode ajudar na locomoção. Mas estamos no momento olhando um transfer para levar dos hotéis ate os locais dos eventos. Main informações em breve."}
                 </p>
             </div>
         </div>
