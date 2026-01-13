@@ -3,7 +3,7 @@ import { getAuth } from "firebase/auth";
 
 /* --- 5. MAIN APP CONTROLLER --- */
 const firebaseConfig = {
-    apiKey: "",
+    apiKey: "AIzaSyC9QRoQ2E0M4qStlDx0rKjW2iJ-MOJQNjA",
     authDomain: "wedding-nameissa.firebaseapp.com",
     projectId: "wedding-nameissa",
     storageBucket: "wedding-nameissa.firebasestorage.app",

@@ -202,7 +202,7 @@ export const CONTENT = {
                         time: "Domingo - 01:00",
                         title: "Fim da Festa?",
                         badge: "Hotel Solar do Imperador",
-                        desc: "Teoricamente é o horário do fim da festa, mas a noite é uma criança… quem sabe o que ela prepara para os inimigos do fim?"
+                        desc: "Teoricamente é o horário do fim da festa, mas a noite é uma criança… Não tem nada planejado, mas pra quem tiver energia, podemos continuar porque os noivos também são inimigos do fim!"
                     },
                 ],
                 post: [

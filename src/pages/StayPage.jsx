@@ -11,7 +11,7 @@ export const StayPage = ({t, lang}) => (
             <div>
                 <p className="mb-6 text-gray-600">
                     {/* {lang === 'pt-BR' ? "xxx" : */}
-                    <p>O casamento será no Hotel Solar do Imperador, que é perto da cidade de Porto Seguro, aeroporto e
+                    <p>O casamento será no Hotel Solar do Imperador, que é perto do centro da cidade de Porto Seguro, passarela da cultura, aeroporto e
                         rodoviária.
                         Porém, os eventos de aquecimento e principais atividades para fazer durante o dia ficam perto da
                         praia de Taperapuã</p>
@@ -21,12 +21,12 @@ export const StayPage = ({t, lang}) => (
                         conveniente.</p>
                     <p className="mt-3">Porto Seguro não é muito grande, mas do fim da orla da Praia até o hotel, o
                         tempo gira em torno de 30min de carro.</p>
-                    <p className="mt-3 font-bold">Olhamos várias opções de hotéis, e decidimos por 4 opções que
-                        esperamos agradar a maioria dos gostos, e que estão em locais diferentes para cada evento.</p>
+                    <p className="mt-3 font-bold">Olhamos várias opções de hotéis, e decidimos por 3 opções que
+                        esperamos agradar a maioria dos gostos e tempos de estadia.</p>
 
-                    <p className="mt-3">Estamos olhando a possibilidade de organizar transporte para levar os convidados
-                        da praia até o casamento. Vamos passar mais informações quando soubermos melhor onde todos vão
-                        ficar.</p>
+                    <p className="mt-3">Estamos olhando opçoes de transporte para levar os convidados
+                        da praia até o casamento e talvez os outros eventos, a partir destes 3 locais.
+                        Vamos passar mais informações quando soubermos melhor onde todos os convidados irão ficar.</p>
 
 
                     {/* } */}
@@ -44,8 +44,7 @@ export const StayPage = ({t, lang}) => (
                 <div className="bg-white p-6 rounded-[15px] mb-4 border-l-4 border-[var(--color-muted)] shadow-sm">
                     <h4 className="font-bold text-[var(--color-primary)]">1. Porto Geraes Praia Hotel</h4>
                     <p className="text-sm text-gray-500 mt-3">Hotel simples, mas muito gostoso e super bem localizado.
-                        Próximo das barracas mais badaladas e de várias áreas com restaurantes e supermercados. O mar
-                        das praias mais próximas é um pouco mais agitado do que outras em Porto Seguro.
+                        Próximo das barracas mais badaladas e de várias áreas com restaurantes e supermercados.
                     </p>
                     <div className={"mt-3"}>
                         <p className={"text-sm text-gray-500 font-bold"}>Distâncias (carro)</p>
@@ -66,9 +65,15 @@ export const StayPage = ({t, lang}) => (
                         href="https://sbreserva.silbeck.com.br/portogeraes/pt-br/reserva/busca/?checkin=2026-09-18&checkout=2026-09-20&adultos-000001=1&promo=RAISSA">Link</a>
                     </p>
                     <p className="text-sm text-gray-500 mt-2">O link só funciona dentro do Brasil, então se você estiver
-                        fora
-                        e não tiver vpn, contacte o hotel direto pela whatsapp [+55 73 99162255] mencionando o
+                        fora e não tiver VPN, contacte o hotel direto pela whatsapp [+55 73 99162255] mencionando o
                         casamento, e/ou fale com os noivos que eles vão poder ajudar</p>
+                        
+                    <p className="text-sm text-gray-500 font-bold mt-5">Reservas direto com Booking.com: <a
+                        className={'text-[var(--color-secondary)]'}
+                        href="https://www.booking.com/Share-Ii6PMe0">Link</a>
+                    </p>
+                    <p className="text-sm text-gray-500 mt-2">Vale checar o preço pois as vezes tem desconto</p>
+                    
                 </div>
                 <div className="bg-white p-6 rounded-[15px] mb-4 border-l-4 border-[var(--color-muted)] shadow-sm">
                     <h4 className="font-bold text-[var(--color-primary)]">2. Condomínio Vila Mar</h4>
@@ -90,9 +95,8 @@ export const StayPage = ({t, lang}) => (
                             <li className={"text-sm text-gray-500"}><span
                                 className={"text-bold"}>Beach Day (Axé Moi):</span> 5 minutos
                             </li>
-                            <li className={"text-sm text-gray-500"}><span className={"text-bold"}>Pre-wedding (Barraca da Jinga):</span> 10/15
-                                minutos
-                            </li>
+                            {/* <li className={"text-sm text-gray-500"}><span className={"text-bold"}>Pre-wedding (Barraca da Jinga):</span> 10/15 minutos */}
+                            {/* </li> */}
                         </ul>
                     </div>
                     <p className="text-sm text-gray-500 font-bold mt-5">Reservas (e detalhes)</p>
@@ -123,42 +127,19 @@ export const StayPage = ({t, lang}) => (
                             <li className={"text-sm text-gray-500"}><span
                                 className={"text-bold"}>Beach Day (Axé Moi):</span> 10/15 minutos
                             </li>
-                            <li className={"text-sm text-gray-500"}><span className={"text-bold"}>Pre-wedding (Barraca da Jinga):</span> 20/25
-                                minutos
-                            </li>
+                            {/* <li className={"text-sm text-gray-500"}><span className={"text-bold"}>Pre-wedding (Barraca da Jinga):</span> 20/25 minutos */}
+                            {/* </li> */}
                         </ul>
                     </div>
                     <p className="text-sm text-gray-500 font-bold mt-5">Reservas (com desconto): <a
                         className={'text-[var(--color-secondary)]'}
                         href="#">Link</a>
                     </p>
-                </div>
-                <div className="bg-white p-6 rounded-[15px] mb-4 border-l-4 border-[var(--color-muted)] shadow-sm">
-                    <h4 className="font-bold text-[var(--color-primary)]">4. Village Mutá</h4>
-                    <p className="text-sm text-gray-500 mt-3">O hotel/casa preferido dos noivos, porém, é o mais
-                        distante do local do casamento. São apartamentos com cozinha completa e múltiplos quartos, porém
-                        com toda estrutura de hotel com café da manhã. É bem em frente à praia com o mar mais calmo,
-                        ideal para crianças. Não tem tantas opções de restaurantes a noite, mas barracas de praia
-                        próxima ficam abertas e oferecem opçoes de jantar, ou a própria barraca do hotel
-                    </p>
-                    <div className={"mt-3"}>
-                        <p className={"text-sm text-gray-500 font-bold"}>Distâncias (carro)</p>
-                        <ul className={"mt-1"}>
-                            <li className={"text-sm text-gray-500"}><span className={"text-bold"}>Casamento (Solar do Imperador):</span> 20/25
-                                minutos
-                            </li>
-                            <li className={"text-sm text-gray-500"}><span
-                                className={"text-bold"}>Beach Day (Axé Moi):</span> 10/15 minutos
-                            </li>
-                            <li className={"text-sm text-gray-500"}><span className={"text-bold"}>Pre-wedding (Barraca da Jinga):</span> 5
-                                minutos
-                            </li>
-                        </ul>
-                    </div>
-                    <p className="text-sm text-gray-500 font-bold mt-5">Reservas (com desconto): <a
+                    <p className="text-sm text-gray-500 font-bold mt-5">Reservas direto com Booking.com: <a
                         className={'text-[var(--color-secondary)]'}
-                        href="#">Link</a>
+                        href="https://www.booking.com/Share-cCmOVg1">Link</a>
                     </p>
+                    <p className="text-sm text-gray-500 mt-2">Vale checar o preço pois as vezes tem desconto</p>
                 </div>
             </div>
         </div>
