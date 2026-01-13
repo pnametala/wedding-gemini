@@ -14,8 +14,7 @@ export const HomePage = ({t}) => {
                 <div
                     className="absolute inset-0 bg-gradient-to-b from-[var(--color-bg)]/30 to-[var(--color-bg)]/60"></div>
                 <div className="relative z-10 px-4 -mt-12 w-full animate-[float_6s_ease-in-out_infinite]">
-                    <h1 className="font-[var(--font-script)] text-6xl md:text-8xl text-[var(--color-primary)] mb-2 drop-shadow-sm autography">Raissa
-                        & Pedro</h1>
+                    <h1 className="font-[var(--font-script)] text-6xl md:text-8xl text-[var(--color-primary)] mb-2 drop-shadow-sm autography">Raissa & Pedro</h1>
                     <div
                         className="flex flex-col md:flex-row items-center justify-center gap-2 font-[var(--font-heading)] text-lg md:text-xl tracking-[0.2em] text-[var(--color-primary)] font-bold uppercase mb-8 drop-shadow-sm">
                         <div className="flex items-center gap-2">
@@ -28,16 +27,25 @@ export const HomePage = ({t}) => {
                             className="cinzel font-[var(--font-heading)] text-xl md:text-4xl font-bold text-[var(--color-primary)] tracking-widest">{t.date}</span>
                     </div>
                     <br/>
-                    <Link to="/rsvp"
+                    <div>
+                    <a href="#intinerary"
                             className="bg-[var(--color-secondary)] text-white px-8 py-3 rounded-full font-[var(--font-heading)] font-bold tracking-widest border border-[var(--color-secondary)] hover:bg-[#d65b38] hover:-translate-y-1 hover:shadow-lg transition-all">
+                        {t.lineup_info}
+                    </a>
+                    </div>
+                    <div class="mt-10">
+                    <Link to="/rsvp"
+                            className="bg-[var(--color-primary)] text-white px-8 py-3 rounded-full font-[var(--font-heading)] font-bold tracking-widest border border-[var(--color-primary)] hover:bg-[#d65b38] hover:-translate-y-1 hover:shadow-lg transition-all">
                         {t.rsvp_btn}
                     </Link>
+                  </div>
+                    
                 </div>
             </section>
 
             {/* NAV GRID */}
-            <div className="relative z-20 max-w-7xl mx-auto px-4 -mt-32 mb-20">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+            <div className="relative z-20 max-w-7xl mx-auto px-4 -mt-32 mb-5">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 gap-6">
                     <NavCard title={t.nav.story.title} sub={t.nav.story.sub} goTo={'story'}
                              colorVar="primary"/>
                     <NavCard title={t.nav.dest.title} sub={t.nav.dest.sub} goTo={'why-ps'}
@@ -54,10 +62,10 @@ export const HomePage = ({t}) => {
             </div>
 
             {/* ITINERARY */}
-            <section
-                className="py-24 px-4 bg-[var(--color-bg)] text-center bg-[image:radial-gradient(var(--color-muted)_1px,transparent_1px)] bg-[length:40px_40px]">
+            <section id="intinerary"
+                className="py-10 px-4 bg-[var(--color-bg)] text-center bg-[image:radial-gradient(var(--color-muted)_1px,transparent_1px)] bg-[length:40px_40px]">
                 <h2 className="font-[var(--font-heading)] text-4xl md:text-5xl text-[var(--color-primary)] mb-2">{t.itinerary.title}</h2>
-                <p className="font-[var(--font-script)] text-2xl md:text-1xl text-[var(--color-highlight)] mb-12 inline-block">{t.itinerary.sub}</p>
+                <p className="font-[var(--font-script)] pt-2 text-[var(--color-primary)] mb-8 inline-block">{t.itinerary.sub}</p>
 
                 <div className="flex flex-wrap justify-center gap-4 mb-16">
                     {['pre', 'wed', 'post'].map((key, idx) => (

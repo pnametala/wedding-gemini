@@ -1,6 +1,7 @@
 export const CONTENT = {
     "en-AU": {
         rsvp_btn: "Confirm Presence",
+        lineup_info: "Veja a Programação!",
         subtitle: "Porto Seguro - Bahia - Brazil",
         date: "19th September 2026",
         backBtn: "Back",
@@ -145,6 +146,7 @@ export const CONTENT = {
     },
     "pt-BR": {
         rsvp_btn: "Confirme sua presença",
+        lineup_info: "Veja a Programação!",
         subtitle: "Porto Seguro - Bahia - Brasil",
         date: "19 de Setembro de 2026",
         backBtn: "Voltar",
@@ -157,8 +159,8 @@ export const CONTENT = {
             dest: {title: "Porto Seguro", sub: "Porquê lá?"}
         },
         itinerary: {
-            title: "O Intinerário do Casamento!",
-            sub: "Você não achou que depois de 10 anos, celebraríamos só um dia né?",
+            title: "A Programação do Casamento!",
+            sub: "Preparamos dias de aquecimento com muito carinho pra aproveitar o máximo de esse encontro de tantas pessoas queridas num só lugar! Preparados?",
             tabs: ["Dias de Aquecimento", "O Grande Dia!", "O dia da Ressaca"],
             events: {
                 pre: [
@@ -190,7 +192,6 @@ export const CONTENT = {
                         title: "Cerimônia",
                         desc: "O ponto alto desse carnaval/casamento finalmente chegou! Mal podemos esperar para oficializar nossa união em frente às pessoas que mais amamos nesse mundo.",
                         badge: "Hotel Solar do Imperador",
-                        color: "secondary"
                     },
                     {
                         time: "Sábado - 17:00",

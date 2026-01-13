@@ -50,7 +50,6 @@ const LandingPage = () => {
                     style={{ y: textY }}
                 >
                     <h1 className="text-6xl md:text-9xl font-serif font-bold mb-4 tracking-tight text-primary">
-                        Ana & Bruno
                     </h1>
                     <p className="text-xl md:text-3xl font-light tracking-[0.2em] uppercase mb-8 text-stone-600">
                         {t('landing.location')}

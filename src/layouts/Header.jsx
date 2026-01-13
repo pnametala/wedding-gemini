@@ -9,11 +9,6 @@ export const Header = ({ isScrolled, lang, setLang, t}) => {
     const navigate = useNavigate();
     const { currentUser } = useAuth();
 
-    const handleSignOut = async () => {
-        await signOut(auth)
-        navigate('/login');
-    }
-
     if (!currentUser) {
         return (<></>)
     }
@@ -47,14 +42,9 @@ export const Header = ({ isScrolled, lang, setLang, t}) => {
                     to={"/rsvp"}
                     className="cursor-pointer px-4 md:px-5 py-2 rounded-full border border-[var(--color-secondary)] text-[var(--color-secondary)] hover:bg-[var(--color-secondary)] hover:text-white transition-all text-xs font-bold uppercase tracking-wider bg-[var(--color-secondary)]/10"
                 >
-                    {t.rsvp_btn}
+                    RSVP
                 </Link>
-                <button
-                    onClick={handleSignOut}
-                    className="cursor-pointer px-4 md:px-5 py-2 rounded-full border border-[var(--color-secondary)] text-[var(--color-secondary)] hover:bg-[var(--color-secondary)] hover:text-white transition-all text-xs font-bold uppercase tracking-wider bg-[var(--color-secondary)]/10"
-                >
-                    Sign out
-                </button>
+                
             </div>
         </header>
     );
