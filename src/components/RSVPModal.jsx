@@ -53,9 +53,9 @@ export const RSVPModal = ({isOpen, onClose, t, lang}) => {
                 message: form.message,
             });
             console.log("Document written with ID: ", docRef.id);
-            setSuccess(lang === "en" ? "RSVP Saved Successfully" : "Presença Confirmada!")
+            setSuccess(lang === 'en-AU' ? "RSVP Saved Successfully" : "Presença Confirmada!")
         } catch (e) {
-            setError(lang === "en" ? "Error trying to save your RSVP. Please, try again." : "Erro ao confirmar presença. Por favor, tente novamente.")
+            setError(lang === 'en-AU' ? "Error trying to save your RSVP. Please, try again." : "Erro ao confirmar presença. Por favor, tente novamente.")
             console.error("Error adding document: ", e);
         }
     }
@@ -64,12 +64,12 @@ export const RSVPModal = ({isOpen, onClose, t, lang}) => {
         if (password.toLowerCase() === 'trancoso') {
             setStep('form');
             setError("")
-        } else setError(lang === 'en' ? "Wrong password! Please try again." : "Senha incorreta! Tente novamente.");
+        } else setError(lang === 'en-AU' ? "Wrong password! Please try again." : "Senha incorreta! Tente novamente.");
     };
 
     const handleGenerateWish = async () => {
         setIsWishLoading(true);
-        const sysPrompt = `Draft a warm, short (under 40 words) wedding wish for Raissa & Pedro who are getting married in Bahia. Tone: Sincere and happy. Language: ${lang === 'en' ? 'English' : 'Portuguese'}.`;
+        const sysPrompt = `Draft a warm, short (under 40 words) wedding wish for Raissa & Pedro who are getting married in Bahia. Tone: Sincere and happy. Language: ${lang === 'en-AU' ? 'English' : 'Portuguese'}.`;
         const text = await callGemini("Draft a wedding message.", sysPrompt);
         setMessage(text.replace(/"/g, '')); // Remove quotes if AI adds them
         setIsWishLoading(false);

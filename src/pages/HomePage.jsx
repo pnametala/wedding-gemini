@@ -4,7 +4,7 @@ import {EventCard} from "@/components/EventCard.jsx";
 import {MapPin} from "lucide-react";
 import {Link} from "react-router-dom";
 
-export const HomePage = ({t, onOpenModal}) => {
+export const HomePage = ({t}) => {
     const [itineraryTab, setItineraryTab] = useState('wed');
 
     return (

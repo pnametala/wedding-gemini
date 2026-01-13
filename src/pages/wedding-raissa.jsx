@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import {CONTENT} from "@/locales/locale.js";
 import {Header} from "@/layouts/Header.jsx";
 import {Footer} from "@/layouts/Footer.jsx";
-import {RSVPModal} from "@/components/RSVPModal.jsx";
 import {HomePage} from "@/pages/HomePage.jsx";
 import {StoryPage} from "@/pages/StoryPage.jsx";
 import {DestinationPage} from "@/pages/DestinationPage.jsx";
@@ -11,11 +10,14 @@ import {DressCodePage} from "@/pages/DessCodePage.jsx";
 import {FAQPage} from "@/pages/FAQPage.jsx";
 import {TravelPage} from "@/pages/TravelPage.jsx";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {AuthProvider} from "@/context/AuthContext.jsx";
+import ProtectedRoute from "@/components/ProtectedRoute.jsx";
 
 import fitasAnimation from "@/lottie/fitas.json";
 import {useLottie} from "lottie-react";
 import {initializeApp} from "@firebase/app";
 import {RSVPPage} from "@/pages/RSVPPage.jsx";
+import LoginPage from "@/pages/LoginPage.jsx";
 
 /* --- GEMINI API UTILITIES --- */
 
@@ -52,26 +54,29 @@ export async function callGemini(prompt, systemInstruction = "") {
 
 /* --- 5. MAIN APP CONTROLLER --- */
 const firebaseConfig = {
-    apiKey: "",
+    apiKey: "AIzaSyC9QRoQ2E0M4qStlDx0rKjW2iJ-MOJQNjA",
     authDomain: "wedding-nameissa.firebaseapp.com",
     projectId: "wedding-nameissa",
     storageBucket: "wedding-nameissa.firebasestorage.app",
-    messagingSenderId: "",
-    appId: "",
-    measurementId: ""
+    messagingSenderId: "416682485685",
+    appId: "1:416682485685:web:74af94ea50b2169f4c9bfc",
+    measurementId: "G-93P3D4S60T"
 };
 export const app = initializeApp(firebaseConfig);
 
 export default function RaissaApp() {
-    const [lang, setLang] = useState('en');
+    const [lang, setLang] = useState(() => {
+        return localStorage.getItem('nameissa-lang') || navigator.language || 'en-AU'
+    });
     const [isScrolled, setIsScrolled] = useState(false);
-    const [modalOpen, setModalOpen] = useState(false);
 
     const t = CONTENT[lang];
 
     useEffect(() => {
-        const userLang = navigator.language || navigator.userLanguage;
-        if (userLang.toLowerCase().includes('pt')) setLang('pt');
+        localStorage.setItem('nameissa-lang', lang);
+    }, [lang]);
+
+    useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 200);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -109,27 +114,38 @@ export default function RaissaApp() {
           --font-body: 'Montserrat', sans-serif;
         }
       `}</style>
-            <BrowserRouter>
-                <Header isScrolled={isScrolled} lang={lang} setLang={setLang} t={t} setModalOpen={setModalOpen}/>
+            <AuthProvider>
+                <BrowserRouter>
+                    <Header isScrolled={isScrolled} lang={lang} setLang={setLang} t={t} />
 
-                <div className={'absolute top-0 right-0 pr-5 w-96'}>{View}</div>
-                <main>
-                    <Routes>
-                        <Route path="/"
-                               element={<HomePage t={t} onOpenModal={() => setModalOpen(true)}/>}/>
-                        <Route path="story" element={<StoryPage t={t} lang={lang}/>}/>
-                        <Route path="why-ps" element={<DestinationPage t={t} lang={lang}/>}/>
-                        <Route path="stay" element={<StayPage t={t} lang={lang}/>}/>
-                        <Route path="dress" element={<DressCodePage t={t} lang={lang}/>}/>
-                        <Route path="faq" element={<FAQPage t={t} lang={lang}/>}/>
-                        <Route path="travel" element={<TravelPage t={t} lang={lang}/>}/>
-                        <Route path="rsvp" element={<RSVPPage t={t} lang={lang}/>}/>
-                    </Routes>
-                </main>
-            </BrowserRouter>
+                    <div className={'absolute top-0 right-0 pr-5 w-96'}>{View}</div>
+                    <main>
+                        <Routes>
+                            <Route path="/login" element={<LoginPage/>}/>
+                            <Route path="/" element={
+                                <ProtectedRoute>
+                                    <HomePage t={t} />
+                                </ProtectedRoute>}/>
+                            <Route path="story"
+                                   element={<ProtectedRoute><StoryPage t={t} lang={lang}/></ProtectedRoute>}/>
+                            <Route path="why-ps"
+                                   element={<ProtectedRoute><DestinationPage t={t} lang={lang}/></ProtectedRoute>}/>
+                            <Route path="stay"
+                                   element={<ProtectedRoute><StayPage t={t} lang={lang}/></ProtectedRoute>}/>
+                            <Route path="dress"
+                                   element={<ProtectedRoute><DressCodePage t={t} lang={lang}/></ProtectedRoute>}/>
+                            <Route path="faq" element={<ProtectedRoute><FAQPage t={t} lang={lang}/></ProtectedRoute>}/>
+                            <Route path="travel"
+                                   element={<ProtectedRoute><TravelPage t={t} lang={lang}/></ProtectedRoute>}/>
+                            <Route path="rsvp"
+                                   element={<ProtectedRoute><RSVPPage t={t} lang={lang}/></ProtectedRoute>}/>
+                        </Routes>
+                    </main>
+                </BrowserRouter>
+            </AuthProvider>
 
             <Footer/>
-            <RSVPModal isOpen={modalOpen} onClose={() => setModalOpen(false)} t={t} lang={lang}/>
         </div>
-    );
+    )
+        ;
 }

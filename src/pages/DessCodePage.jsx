@@ -18,17 +18,17 @@ export const DressCodePage = ({t, lang}) => (
             ))}
         </div> */}
         <div className="bg-white p-8 rounded-[20px] max-w-md mx-auto shadow-sm">
-            <div className="font-bold mb-1 text-lg">{lang === 'en'
+            <div className="font-bold mb-1 text-lg">{lang === 'en-AU'
                 ? "For Women"
                 : "Mulheres"}</div>
-            <div className="mb-4">{lang === 'en'
+            <div className="mb-4">{lang === 'en-AU'
                 ? "Think light fabrics,and colorful dresses"
                 : "Vestidos longos ou mid. Com tecidos leves e coloridos se possível."}</div>
             <a href="https://pin.it/71WBUlZlW" target="_blank"
                 className="bg-[var(--color-secondary)] text-white px-6 py-2 rounded-full font-bold text-sm hover:opacity-90">
-                {lang === 'en' ? 'Inspo on Pinterest' : 'Inspirações no Pinterest'}
+                {lang === 'en-AU' ? 'Inspo on Pinterest' : 'Inspirações no Pinterest'}
             </a>
-            <div class="mt-4 text-sm">{lang === 'en'
+            <div class="mt-4 text-sm">{lang === 'en-AU'
                 ? "The link above is JUST for inspiration—feel free to wear whatever best suits your style within the recommended dress code!"
                 : "O link acima é APENAS para inspiração, fique a vontade para usar o que for mais a sua cara dentro do traje recomendado!"}</div>
             {/* TODO: ADD BUTTON */}
@@ -38,19 +38,19 @@ export const DressCodePage = ({t, lang}) => (
         <br />
         
        <div className="bg-white p-8 rounded-[20px] max-w-md mx-auto shadow-sm">
-            <div className="font-bold mb-1 text-lg">{lang === 'en'
+            <div className="font-bold mb-1 text-lg">{lang === 'en-AU'
                 ? "For Men"
                 : "Para Homens"}</div>
-            <div className="mb-4">{lang === 'en'
+            <div className="mb-4">{lang === 'en-AU'
                 ? "Suit jacket, but no tie required."
                 : "Blazer/Terno, gravata não obrigatória. Tons claros ou coloridos se possível."}</div>
             <a href="https://pin.it/7ktYN4Rkf" target="_blank"
                 
                 className="bg-[var(--color-secondary)] text-white px-6 py-2 rounded-full font-bold text-sm hover:opacity-90">
-                {lang === 'en' ? 'Inspo on Pinterest' : 'Inspirações no Pinterest'}
+                {lang === 'en-AU' ? 'Inspo on Pinterest' : 'Inspirações no Pinterest'}
             </a> 
 
-            <div class="mt-4 text-sm">{lang === 'en'
+            <div class="mt-4 text-sm">{lang === 'en-AU'
                 ? "The link above is JUST for inspiration—feel free to wear whatever best suits your style within the recommended dress code!"
                 : "O link acima é APENAS para inspiração, fique a vontade para usar o que for mais a sua cara dentro do traje recomendado!"}</div>
             {/* TODO: ADD BUTTON */}

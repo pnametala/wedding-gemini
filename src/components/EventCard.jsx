@@ -18,7 +18,7 @@ export const EventCard = ({ time, title, desc, badge, badgeColor, align }) => {
       ${align === 'left' ? 'md:mr-auto text-left md:text-right' : 'md:ml-auto text-left'}`}
         >
             <div className={`hidden md:block absolute w-5 h-5 bg-white border-4 border-[var(--color-secondary)] rounded-full top-8 shadow-[0_0_0_4px_var(--color-bg)] z-20
-        ${align === 'left' ? '-right-[44px]' : '-left-[44px]'}`}
+        ${align === 'left' ? '-right-[57px]' : '-left-[57px]'}`}
             />
             {badge && (
                 <span
