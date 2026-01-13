@@ -8,7 +8,7 @@ const BackButton = ({ onClick, lang }) => (
         onClick={onClick}
         className="mb-8 px-6 py-2 border border-gray-300 rounded-full text-gray-500 hover:bg-gray-100 transition-colors flex items-center gap-2"
     >
-        <Home className="w-4 h-4" /> {lang === 'en' ? 'Back Home' : 'Voltar ao Início'}
+        <Home className="w-4 h-4" /> {lang === 'en-AU' ? 'Back Home' : 'Voltar ao Início'}
     </button>
 );
 
@@ -31,7 +31,7 @@ const EventCard = ({ time, title, desc, badge, badgeColor, align }) => {
       ${align === 'left' ? 'md:mr-auto text-right md:text-right' : 'md:ml-auto text-left'}`}
         >
             <div className={`hidden md:block absolute w-5 h-5 bg-white border-4 border-[#E86C48] rounded-full top-8 shadow-[0_0_0_4px_#F9F6F0] z-20
-        ${align === 'left' ? '-right-[44px]' : '-left-[44px]'}`}
+        ${align === 'left' ? '-right-[57px]' : '-left-[57px]'}`}
             />
             {badge && (
                 <span
@@ -89,32 +89,32 @@ const DestinationPage = ({ t, lang, onBack }) => (
         <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-[20px] shadow-sm">
                 <h3 className="font-serif text-2xl text-[#E86C48] mb-4 border-b pb-2 flex items-center gap-2">
-                    <Sun className="w-5 h-5" /> {lang === 'en' ? 'Things to Do' : 'O Que Fazer'}
+                    <Sun className="w-5 h-5" /> {lang === 'en-AU' ? 'Things to Do' : 'O Que Fazer'}
                 </h3>
                 <ul className="space-y-4">
                     <li>
                         <strong className="block text-[#2E4A3D]">The Quadrado (Trancoso)</strong>
-                        <span className="text-sm text-gray-600">{lang === 'en' ? "A historic village square with colorful houses, shops, and a stunning white church. Best at sunset!" : "O coração de Trancoso. Casinhas coloridas, o famoso campinho e a igrejinha. Imperdível no pôr do sol!"}</span>
+                        <span className="text-sm text-gray-600">{lang === 'en-AU' ? "A historic village square with colorful houses, shops, and a stunning white church. Best at sunset!" : "O coração de Trancoso. Casinhas coloridas, o famoso campinho e a igrejinha. Imperdível no pôr do sol!"}</span>
                     </li>
                     <li>
                         <strong className="block text-[#2E4A3D]">Praia do Espelho</strong>
-                        <span className="text-sm text-gray-600">{lang === 'en' ? "Famous for its natural pools and cliffs. Arrive at low tide." : "Famosa pelas piscinas naturais e falésias. Chegue na maré baixa."}</span>
+                        <span className="text-sm text-gray-600">{lang === 'en-AU' ? "Famous for its natural pools and cliffs. Arrive at low tide." : "Famosa pelas piscinas naturais e falésias. Chegue na maré baixa."}</span>
                     </li>
                 </ul>
             </div>
 
             <div className="bg-white p-8 rounded-[20px] shadow-sm">
                 <h3 className="font-serif text-2xl text-[#E86C48] mb-4 border-b pb-2 flex items-center gap-2">
-                    <Heart className="w-5 h-5" /> {lang === 'en' ? 'Where to Eat' : 'Onde Comer'}
+                    <Heart className="w-5 h-5" /> {lang === 'en-AU' ? 'Where to Eat' : 'Onde Comer'}
                 </h3>
                 <ul className="space-y-4">
                     <li>
                         <strong className="block text-[#2E4A3D]">Capim Santo</strong>
-                        <span className="text-sm text-gray-600">{lang === 'en' ? "A classic in Trancoso. Delicious seafood in a garden." : "Um clássico. Frutos do mar deliciosos em um jardim."}</span>
+                        <span className="text-sm text-gray-600">{lang === 'en-AU' ? "A classic in Trancoso. Delicious seafood in a garden." : "Um clássico. Frutos do mar deliciosos em um jardim."}</span>
                     </li>
                     <li>
                         <strong className="block text-[#2E4A3D]">Maritaca</strong>
-                        <span className="text-sm text-gray-600">{lang === 'en' ? "Best pizza in town. Great atmosphere for groups." : "Melhor pizza da cidade. Ótima para grupos."}</span>
+                        <span className="text-sm text-gray-600">{lang === 'en-AU' ? "Best pizza in town. Great atmosphere for groups." : "Melhor pizza da cidade. Ótima para grupos."}</span>
                     </li>
                 </ul>
             </div>
@@ -122,11 +122,11 @@ const DestinationPage = ({ t, lang, onBack }) => (
 
         <div className="mt-8 bg-white p-8 rounded-[20px] shadow-sm border-l-4 border-[#F4D35E]">
             <h3 className="font-serif text-xl text-[#2E4A3D] mb-4 font-bold flex items-center gap-2">
-                <Info className="w-5 h-5 text-[#F4D35E]" /> {lang === 'en' ? 'Tips for Guests' : 'Dicas'}
+                <Info className="w-5 h-5 text-[#F4D35E]" /> {lang === 'en-AU' ? 'Tips for Guests' : 'Dicas'}
             </h3>
             <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-600">
-                <div><strong>Safety:</strong> {lang === 'en' ? "Trancoso is safe, but avoid deserted beaches at night." : "Trancoso é seguro, mas evite praias desertas à noite."}</div>
-                <div><strong>Transport:</strong> {lang === 'en' ? "Uber is limited. Rent a car or use taxis." : "Uber é limitado. Alugue carro ou use táxis."}</div>
+                <div><strong>Safety:</strong> {lang === 'en-AU' ? "Trancoso is safe, but avoid deserted beaches at night." : "Trancoso é seguro, mas evite praias desertas à noite."}</div>
+                <div><strong>Transport:</strong> {lang === 'en-AU' ? "Uber is limited. Rent a car or use taxis." : "Uber é limitado. Alugue carro ou use táxis."}</div>
             </div>
         </div>
     </div>
@@ -138,7 +138,7 @@ const StayPage = ({ t, lang, onBack }) => (
         <SectionHeader title={t.nav.stay.title} />
         <div className="grid md:grid-cols-2 gap-8">
             <div>
-                <p className="mb-6 text-gray-600">{lang === 'en' ? "We recommend staying in Trancoso or Arraial d'Ajuda. Shuttles will be provided." : "Recomendamos ficar em Trancoso ou Arraial d'Ajuda. Haverá vans."}</p>
+                <p className="mb-6 text-gray-600">{lang === 'en-AU' ? "We recommend staying in Trancoso or Arraial d'Ajuda. Shuttles will be provided." : "Recomendamos ficar em Trancoso ou Arraial d'Ajuda. Haverá vans."}</p>
                 {['UXUA Casa Hotel', 'Pousada Estrela D\'Água', 'Hotel Fasano'].map((hotel, i) => (
                     <div key={i} className="bg-white p-6 rounded-[15px] mb-4 border-l-4 border-[#7C9A86] shadow-sm">
                         <h4 className="font-bold text-[#2E4A3D]">{hotel}</h4>
@@ -158,7 +158,7 @@ const DressCodePage = ({ t, lang, onBack }) => (
         <BackButton  lang={lang} />
         <SectionHeader title={t.nav.dress.title} sub={t.nav.dress.sub} />
         <p className="max-w-2xl mx-auto text-gray-600 mb-8">
-            {lang === 'en'
+            {lang === 'en-AU'
                 ? "Think light fabrics, linen suits, and colorful dresses. The ceremony is on grass, so avoid stilettos."
                 : "Tecidos leves, linho e vestidos coloridos. A cerimônia será na grama, evite salto fino."}
         </p>
@@ -170,7 +170,7 @@ const DressCodePage = ({ t, lang, onBack }) => (
         <div className="bg-white p-8 rounded-[20px] max-w-md mx-auto shadow-sm">
             <h4 className="font-bold mb-4">Inspiration Board</h4>
             <button className="bg-[#E86C48] text-white px-6 py-2 rounded-full font-bold text-sm hover:bg-[#d65b38]">
-                {lang === 'en' ? 'View on Pinterest' : 'Ver no Pinterest'}
+                {lang === 'en-AU' ? 'View on Pinterest' : 'Ver no Pinterest'}
             </button>
         </div>
     </div>
@@ -204,13 +204,13 @@ const TravelPage = ({ t, lang, onBack }) => (
             <div className="mb-6">
                 <h3 className="text-xl font-bold text-[#E86C48] mb-2 flex items-center gap-2"><Plane className="w-5 h-5" /> Flights</h3>
                 <p className="text-gray-600">
-                    {lang === 'en' ? "Fly into Porto Seguro Airport (BPS). 1h drive to Trancoso." : "Voe para Porto Seguro (BPS). 1h de carro até Trancoso."}
+                    {lang === 'en-AU' ? "Fly into Porto Seguro Airport (BPS). 1h drive to Trancoso." : "Voe para Porto Seguro (BPS). 1h de carro até Trancoso."}
                 </p>
             </div>
             <div>
                 <h3 className="text-xl font-bold text-[#E86C48] mb-2 flex items-center gap-2"><MapPin className="w-5 h-5" /> Transfers</h3>
                 <p className="text-gray-600">
-                    {lang === 'en' ? "We recommend booking a private transfer or rental car." : "Recomendamos transfer privado ou aluguel de carro."}
+                    {lang === 'en-AU' ? "We recommend booking a private transfer or rental car." : "Recomendamos transfer privado ou aluguel de carro."}
                 </p>
             </div>
         </div>
@@ -297,13 +297,13 @@ const Header = ({ isScrolled, lang, setLang, t, setModalOpen, setView }) => (
             <div className="bg-white/10 rounded-full p-1 flex">
                 <button
                     onClick={() => setLang('en')}
-                    className={`px-3 py-1 rounded-full text-xs font-serif font-bold transition-all ${lang === 'en' ? 'bg-[#E86C48] text-white' : 'text-white/60 hover:text-white'}`}
+                    className={`px-3 py-1 rounded-full text-xs font-serif font-bold transition-all ${lang === 'en-AU' ? 'bg-[#E86C48] text-white' : 'text-white/60 hover:text-white'}`}
                 >
                     EN
                 </button>
                 <button
                     onClick={() => setLang('pt')}
-                    className={`px-3 py-1 rounded-full text-xs font-serif font-bold transition-all ${lang === 'pt' ? 'bg-[#E86C48] text-white' : 'text-white/60 hover:text-white'}`}
+                    className={`px-3 py-1 rounded-full text-xs font-serif font-bold transition-all ${lang === 'pt-BR' ? 'bg-[#E86C48] text-white' : 'text-white/60 hover:text-white'}`}
                 >
                     PT
                 </button>
@@ -342,7 +342,7 @@ const RSVPModal = ({ isOpen, onClose, t, lang }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert(lang === 'en' ? 'RSVP Sent!' : 'Confirmação Enviada!');
+        alert(lang === 'en-AU' ? 'RSVP Sent!' : 'Confirmação Enviada!');
         onClose();
         setStep('auth');
         setPassword('');

@@ -14,7 +14,7 @@ export const DestinationPage = ({ t, lang }) => {
         setLoading(true);
         setAiResponse('');
 
-        const sysPrompt = `You are a friendly local expert for a wedding in Trancoso and Porto Seguro, Bahia. Provide short, helpful, tropical-themed advice about travel, food, or safety. Language: ${lang === 'en' ? 'English' : 'Portuguese'}.`;
+        const sysPrompt = `You are a friendly local expert for a wedding in Trancoso and Porto Seguro, Bahia. Provide short, helpful, tropical-themed advice about travel, food, or safety. Language: ${lang === 'en-AU' ? 'English' : 'Portuguese'}.`;
         const response = await callGemini(query, sysPrompt);
 
         setAiResponse(response);
@@ -85,32 +85,32 @@ export const DestinationPage = ({ t, lang }) => {
             {/*<div className="grid md:grid-cols-2 gap-8">*/}
             {/*    <div className="bg-white p-8 rounded-[20px] shadow-sm">*/}
             {/*        <h3 className="font-[var(--font-heading)] text-2xl text-[var(--color-secondary)] mb-4 border-b pb-2 flex items-center gap-2">*/}
-            {/*            <Sun className="w-5 h-5" /> {lang === 'en' ? 'Things to Do' : 'O Que Fazer'}*/}
+            {/*            <Sun className="w-5 h-5" /> {lang === 'en-AU' ? 'Things to Do' : 'O Que Fazer'}*/}
             {/*        </h3>*/}
             {/*        <ul className="space-y-4">*/}
             {/*            <li>*/}
             {/*                <strong className="block text-[var(--color-primary)]">The Quadrado (Trancoso)</strong>*/}
-            {/*                <span className="text-sm text-gray-600">{lang === 'en' ? "A historic village square with colorful houses, shops, and a stunning white church. Best at sunset!" : "O coração de Trancoso. Casinhas coloridas, o famoso campinho e a igrejinha. Imperdível no pôr do sol!"}</span>*/}
+            {/*                <span className="text-sm text-gray-600">{lang === 'en-AU' ? "A historic village square with colorful houses, shops, and a stunning white church. Best at sunset!" : "O coração de Trancoso. Casinhas coloridas, o famoso campinho e a igrejinha. Imperdível no pôr do sol!"}</span>*/}
             {/*            </li>*/}
             {/*            <li>*/}
             {/*                <strong className="block text-[var(--color-primary)]">Praia do Espelho</strong>*/}
-            {/*                <span className="text-sm text-gray-600">{lang === 'en' ? "Famous for its natural pools and cliffs. Arrive at low tide." : "Famosa pelas piscinas naturais e falésias. Chegue na maré baixa."}</span>*/}
+            {/*                <span className="text-sm text-gray-600">{lang === 'en-AU' ? "Famous for its natural pools and cliffs. Arrive at low tide." : "Famosa pelas piscinas naturais e falésias. Chegue na maré baixa."}</span>*/}
             {/*            </li>*/}
             {/*        </ul>*/}
             {/*    </div>*/}
 
             {/*    <div className="bg-white p-8 rounded-[20px] shadow-sm">*/}
             {/*        <h3 className="font-[var(--font-heading)] text-2xl text-[var(--color-secondary)] mb-4 border-b pb-2 flex items-center gap-2">*/}
-            {/*            <Heart className="w-5 h-5" /> {lang === 'en' ? 'Where to Eat' : 'Onde Comer'}*/}
+            {/*            <Heart className="w-5 h-5" /> {lang === 'en-AU' ? 'Where to Eat' : 'Onde Comer'}*/}
             {/*        </h3>*/}
             {/*        <ul className="space-y-4">*/}
             {/*            <li>*/}
             {/*                <strong className="block text-[var(--color-primary)]">Capim Santo</strong>*/}
-            {/*                <span className="text-sm text-gray-600">{lang === 'en' ? "A classic in Trancoso. Delicious seafood in a garden." : "Um clássico. Frutos do mar deliciosos em um jardim."}</span>*/}
+            {/*                <span className="text-sm text-gray-600">{lang === 'en-AU' ? "A classic in Trancoso. Delicious seafood in a garden." : "Um clássico. Frutos do mar deliciosos em um jardim."}</span>*/}
             {/*            </li>*/}
             {/*            <li>*/}
             {/*                <strong className="block text-[var(--color-primary)]">Maritaca</strong>*/}
-            {/*                <span className="text-sm text-gray-600">{lang === 'en' ? "Best pizza in town. Great atmosphere for groups." : "Melhor pizza da cidade. Ótima para grupos."}</span>*/}
+            {/*                <span className="text-sm text-gray-600">{lang === 'en-AU' ? "Best pizza in town. Great atmosphere for groups." : "Melhor pizza da cidade. Ótima para grupos."}</span>*/}
             {/*            </li>*/}
             {/*        </ul>*/}
             {/*    </div>*/}
@@ -118,11 +118,11 @@ export const DestinationPage = ({ t, lang }) => {
 
             {/*<div className="mt-8 bg-white p-8 rounded-[20px] shadow-sm border-l-4 border-[var(--color-accent)]">*/}
             {/*    <h3 className="font-[var(--font-heading)] text-xl text-[var(--color-primary)] mb-4 font-bold flex items-center gap-2">*/}
-            {/*        <Info className="w-5 h-5 text-[var(--color-accent)]" /> {lang === 'en' ? 'Tips for Guests' : 'Dicas'}*/}
+            {/*        <Info className="w-5 h-5 text-[var(--color-accent)]" /> {lang === 'en-AU' ? 'Tips for Guests' : 'Dicas'}*/}
             {/*    </h3>*/}
             {/*    <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-600">*/}
-            {/*        <div><strong>Safety:</strong> {lang === 'en' ? "Trancoso is safe, but avoid deserted beaches at night." : "Trancoso é seguro, mas evite praias desertas à noite."}</div>*/}
-            {/*        <div><strong>Transport:</strong> {lang === 'en' ? "Uber is limited. Rent a car or use taxis." : "Uber é limitado. Alugue carro ou use táxis."}</div>*/}
+            {/*        <div><strong>Safety:</strong> {lang === 'en-AU' ? "Trancoso is safe, but avoid deserted beaches at night." : "Trancoso é seguro, mas evite praias desertas à noite."}</div>*/}
+            {/*        <div><strong>Transport:</strong> {lang === 'en-AU' ? "Uber is limited. Rent a car or use taxis." : "Uber é limitado. Alugue carro ou use táxis."}</div>*/}
             {/*    </div>*/}
             {/*</div>*/}
         </div>
