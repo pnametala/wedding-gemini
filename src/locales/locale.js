@@ -160,13 +160,13 @@ export const CONTENT = {
         },
         itinerary: {
             title: "A Programação do Casamento!",
-            sub: "Preparamos dias de aquecimento com muito carinho pra aproveitar o máximo de esse encontro de tantas pessoas queridas num só lugar! Preparados?",
+            sub: "Preparamos muitos dias de festa com muito carinho pra aproveitar o máximo de esse encontro de tantas pessoas queridas num só lugar! Preparados?",
             tabs: ["Dias de Aquecimento", "O Grande Dia!", "O dia da Ressaca"],
             events: {
                 pre: [
                     {
                         time: "Quarta - 19:00",
-                        title: "Jantar de Boas-vindas",
+                        title: "Abertura dos Trabalhos",
                         desc: "Vamos adorar encontrar os que vão chegar antes e suas famílias para um jantar de recepção e início oficial das comemorações.",
                         badge: "Condominio Vila Mar",
                         color: "secondary"
@@ -237,9 +237,9 @@ export const CONTENT = {
             yesPlusOne: "Sim",
             noPlusOne: "Não",
             hairNeeded: "Gostaria de fazer cabelo e maquiagem para o grande dia? ($350.00 pp)",
-            joiningWednesdayEvent: "Você pretende ir no Jantar? (16/09)",
-            joiningThursdayEvent: "Você pretende ir no dia de Axe Mói? (17/09)",
-            joiningFridayEvent: "Você pretende ir no BeachDay/Pré? (18/09)",
+            joiningWednesdayEvent: "Pretende ir no Jantar? (16/09, 19hs)",
+            joiningThursdayEvent: "Petende ir no dia da Barraca Axe Mói? (17/09, 11am)",
+            joiningFridayEvent: "Pretende ir no BeachDay/Aquecimento? (18/09, 11am)",
             submit: "Enviar Confirmação"
         },
         ai_guide: {
