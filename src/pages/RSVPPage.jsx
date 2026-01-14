@@ -257,6 +257,7 @@ export const RSVPPage = ({t, lang}) => {
                                 onChange={(e) => setForm({...form, message: e.target.value})}
                                 className="w-full p-3 rounded-xl border-2 border-gray-200 bg-white focus:border-[var(--color-secondary)] focus:outline-none transition-all"
                                 rows="3"
+                                placeholder={t.modal.messagePlaceholder}
                             ></textarea>
                         </div>
 
