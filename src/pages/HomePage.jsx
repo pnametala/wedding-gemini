@@ -72,7 +72,7 @@ export const HomePage = ({t}) => {
                         <button
                             key={key}
                             onClick={() => setItineraryTab(key)}
-                            className={`px-6 md:px-8 py-3 md:py-4 rounded-full font-[var(--font-heading)] font-bold uppercase tracking-wider border-2 border-[var(--color-primary)] transition-all shadow-[4px_4px_0_var(--color-primary)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_var(--color-primary)] text-sm md:text-base
+                            className={`cursor-pointer px-6 md:px-8 py-3 md:py-4 rounded-full font-[var(--font-heading)] font-bold uppercase tracking-wider border-2 border-[var(--color-primary)] transition-all shadow-[4px_4px_0_var(--color-primary)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_var(--color-primary)] text-sm md:text-base
                 ${itineraryTab === key ? 'bg-[var(--color-secondary)] text-white border-[var(--color-primary)]' : 'bg-white text-[var(--color-primary)]'}`}
                         >
                             {t.itinerary.tabs[idx]}

@@ -66,7 +66,9 @@ export const app = initializeApp(firebaseConfig);
 
 export default function RaissaApp() {
     const [lang, setLang] = useState(() => {
-        return localStorage.getItem('nameissa-lang') || navigator.language || 'en-AU'
+        const browserLang = navigator.language.split('-');
+        const bl = (browserLang[0] !== 'en') ? null : navigator.language;
+        return localStorage.getItem('nameissa-lang') || bl || 'en-AU'
     });
     const [isScrolled, setIsScrolled] = useState(false);
 

@@ -261,6 +261,8 @@ export const RSVPPage = ({t, lang}) => {
                             ></textarea>
                         </div>
 
+                        <div className={'mt-2 text-sm text-[var(--color-primary)]'}>{t.modal.changeOfPlans}</div>
+
                         <button type="submit"
                                 className="w-full bg-[var(--color-secondary)] text-white py-3 rounded-full font-bold mt-4 hover:opacity-90">{t.modal.submit}</button>
                     </form>

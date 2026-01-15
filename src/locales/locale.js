@@ -96,7 +96,8 @@ export const CONTENT = {
             joiningWednesdayEvent: "Planning to come to the Dinner? (16/09, 7pm)",
             joiningThursdayEvent: "Planning to go to Axé Moi? (17/09, 11am)",
             joiningFridayEvent: "Planning to go to the Beach Day? (18/09, 11am)",
-            submit: "Send Confirmation"
+            submit: "Send Confirmation",
+            changeOfPlans: "If anything changes and you can't make it to the wedding, please contact us as soon as possible",
         },
         ai_guide: {
             title: "✨ Ask the AI Concierge",
@@ -198,7 +199,7 @@ Being able to gather all these roots and pieces of ourselves that have been scat
                     {
                         time: "Sábado - 15:30",
                         title: "Cerimônia",
-                        desc: "O ponto alto desse carnaval/casamento finalmente chegou! Mal podemos esperar para oficializar nossa união em frente às pessoas que mais amamos nesse mundo.",
+                        desc: "O ponto alto desse casamento finalmente chegou! Mal podemos esperar para oficializar nossa união em frente às pessoas que mais amamos nesse mundo.",
                         badge: "Hotel Solar do Imperador",
                     },
                     {
@@ -249,7 +250,8 @@ Being able to gather all these roots and pieces of ourselves that have been scat
             joiningWednesdayEvent: "Pretende ir no Jantar? (16/09, 19hs)",
             joiningThursdayEvent: "Petende ir no dia da Barraca Axe Mói? (17/09, 11am)",
             joiningFridayEvent: "Pretende ir no BeachDay/Aquecimento? (18/09, 11am)",
-            submit: "Enviar Confirmação"
+            submit: "Enviar Confirmação",
+            changeOfPlans: "Caso os planos mudem e você não possa mais comparecer ao casamento, por favor, entre em contato com com os noivos o mais rápido possível",
         },
         ai_guide: {
             title: "✨ Pergunte ao Concierge IA",
