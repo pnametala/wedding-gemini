@@ -22,7 +22,7 @@ export const CONTENT = {
                     {
                         time: "Wednesday - 7:00 pm",
                         title: "The Kick-off",
-                        desc: "We'd love to catch up with early arrivals and their families for a welcome dinner to officially start the celebrations.",
+                        desc: "We'd love to catch up with early arrivals and their families for a welcome barbecue to officially start the celebrations.",
                         badge: "Condominio Vila Mar",
                         color: "secondary"
                     },
@@ -36,7 +36,7 @@ export const CONTENT = {
                     {
                         time: "Friday - 10:00 am",
                         title: "Pre-Wedding/Beach Day",
-                        desc: "A day to relax by the beach with live music and good company. The only rule is simple: enjoy your self but don't peak too early! Everyone home early so we're 100% for the big day tomorrow.",
+                        desc: "A day to relax by the beach with live music and good company. The only rule is simple: enjoy yourself but don't peak too early! Everyone home early so we're 100% for the big day tomorrow.",
                         badge: "Location TBC",
                         color: "muted"
                     }
@@ -85,7 +85,7 @@ export const CONTENT = {
             dietary: "Any dietary requirements?",
             dietaryPlusOne: "Does your guest have any dietary requirements?",
             message: "Message (Optional)",
-            messagePlaceholder: "Leave a message for the couple, or use this spacemention anything important for them to know about your confirmation (e.g. if kids are coming and what times, family members joining the warm-up events, or any other details that might help with our planning).",
+            messagePlaceholder: "Leave a message for the couple, or use this space to mention anything important for them to know about your confirmation (e.g. if kids are coming and what times, family members joining the warm-up events, or any other details that might help with our planning).",
             ai_wish_btn: "✨ Create Message",
             ai_wish_loading: "Writing...",
             yesAttend: "Yes, wouldn't miss it!",
@@ -93,7 +93,7 @@ export const CONTENT = {
             yesPlusOne: "Yes",
             noPlusOne: "No",
             hairNeeded: "Would you like to book hair and makeup for the big day? ($370.00 BRL pp)",
-            joiningWednesdayEvent: "Planning to come to the Dinner? (16/09, 7pm)",
+            joiningWednesdayEvent: "Planning to come to the Barbecue? (16/09, 7pm)",
             joiningThursdayEvent: "Planning to go to Axé Moi? (17/09, 11am)",
             joiningFridayEvent: "Planning to go to the Beach Day? (18/09, 11am)",
             submit: "Send Confirmation",
@@ -176,7 +176,7 @@ Being able to gather all these roots and pieces of ourselves that have been scat
                     {
                         time: "Quarta - 19:00",
                         title: "Abertura dos Trabalhos",
-                        desc: "Vamos adorar encontrar os que vão chegar antes e suas famílias para um jantar de recepção e início oficial das comemorações.",
+                        desc: "Vamos adorar encontrar os que vão chegar antes e suas famílias para um churrasco de recepção e início oficial das comemorações.",
                         badge: "Condominio Vila Mar",
                         color: "secondary"
                     },
@@ -247,8 +247,8 @@ Being able to gather all these roots and pieces of ourselves that have been scat
             yesPlusOne: "Sim",
             noPlusOne: "Não",
             hairNeeded: "Gostaria de fazer cabelo e maquiagem para o grande dia? (R$370,00 pp)",
-            joiningWednesdayEvent: "Pretende ir no Jantar? (16/09, 19hs)",
-            joiningThursdayEvent: "Petende ir no dia da Barraca Axe Mói? (17/09, 11am)",
+            joiningWednesdayEvent: "Pretende ir no Churrasco? (16/09, 19hs)",
+            joiningThursdayEvent: "Pretende ir no dia da barraca Axé Mói? (17/09, 11am)",
             joiningFridayEvent: "Pretende ir no BeachDay/Aquecimento? (18/09, 11am)",
             submit: "Enviar Confirmação",
             changeOfPlans: "Caso os planos mudem e você não possa mais comparecer ao casamento, por favor, entre em contato com com os noivos o mais rápido possível",
