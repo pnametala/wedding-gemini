@@ -36,7 +36,7 @@ export const CONTENT = {
                     {
                         time: "Friday - 10:00 am",
                         title: "Pre-Wedding/Beach Day",
-                        desc: "A day to relax by the beach with live music and good company. The only rule is simple: enjoy your self but don't peak too early! Everyone home early so we're 100% for the big day tomorrow.",
+                        desc: "A day to relax by the beach with live music and good company. The only rule is simple: enjoy yourself but don't peek too early! Everyone home early so we're 100% for the big day tomorrow.",
                         badge: "Location TBC",
                         color: "muted"
                     }
@@ -85,7 +85,7 @@ export const CONTENT = {
             dietary: "Any dietary requirements?",
             dietaryPlusOne: "Does your guest have any dietary requirements?",
             message: "Message (Optional)",
-            messagePlaceholder: "Leave a message for the couple, or use this spacemention anything important for them to know about your confirmation (e.g. if kids are coming and what times, family members joining the warm-up events, or any other details that might help with our planning).",
+            messagePlaceholder: "Leave a message for the couple, or use this space to mention anything important for them to know about your confirmation (e.g. if kids are coming and what times, family members joining the warm-up events, or any other details that might help with our planning).",
             ai_wish_btn: "✨ Create Message",
             ai_wish_loading: "Writing...",
             yesAttend: "Yes, wouldn't miss it!",
