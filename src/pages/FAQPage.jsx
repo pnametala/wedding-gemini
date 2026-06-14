@@ -9,22 +9,22 @@ export const FAQPage = ({t, lang}) => (
         {[
             {
                 q: {
+                    "en-AU": "Is there a gift registry?",
+                    "pt-BR": "Onde está a lista de presentes?"
+                },
+                a: {
+                    "en-AU": "This is the most honest and least cliché way we can put it: your presence is our gift. We know that hosting a wedding away from most people's homes—with many of you travelling from the other side of the world—is a massive effort. That commitment is worth more to us than any physical gift. If you'd really like to give something, there will be a spot at the wedding to leave us a message or a heartfelt letter. Seeing you all on the dance floor is truly the best gift we could ask for!",
+                    "pt-BR": `Esse é o mais claro e menos clichê possível: “o nosso presente é você”. Sabemos que fazer um casamento em um local que não é próximo da casa da maioria dos convidados, muitos viajando do outro lado do mundo, já é um esforço gigantesco, e maior do que qualquer presente financeiro. Se fizerem muita questão, vamos ter oportunidade no casamento para vocês deixarem mensagens, uma carta escrita com carinho, e você entregando tudo na pista de dança vão ser nosso MELHOR pedido de presente realizado!`
+                }
+            },
+            {
+                q: {
                     "en-AU": "Where are the bride and groom staying?", 
                     "pt-BR": "Onde os noivos vão se hospedar?"
                 },
                 a: {
                     "en-AU": "We're not 100% sure yet! On the actual wedding night, we'll be staying at the venue (Solar do Imperador). For the days leading up to it, we'd love to stay wherever most of our guests end up booking. We'll wait a bit to see where everyone chooses and then we'll settle on a spot nearby!",
                     "pt-BR": "Ainda não sabemos 100%. No dia do casamento vamos ficar no hotel do casamento mesmo, mas nos dias anteriores, gostaríamos de ficar no mesmo local que a maioria dos convidados, logo vamos esperar um pouco para saber onde vão preferir e vamos decidir a partir daí"
-                }
-            },
-            {
-                q: {
-                    "en-AU": "Is there a gift registry?", 
-                    "pt-BR": "Onde está a lista de presentes?"
-                },
-                a: {
-                    "en-AU": "This is the most honest and least cliché way we can put it: your presence is our gift. We know that hosting a wedding away from most people's homes—with many of you travelling from the other side of the world—is a massive effort. That commitment is worth more to us than any physical gift. If you'd really like to give something, there will be a spot at the wedding to leave us a message or a heartfelt letter. Seeing you all on the dance floor is truly the best gift we could ask for!",
-                    "pt-BR": `Esse é o mais claro e menos clichê possível: “o nosso presente é você”. Sabemos que fazer um casamento em um local que não é próximo da casa da maioria dos convidados, muitos viajando do outro lado do mundo, já é um esforço gigantesco, e maior do que qualquer presente financeiro. Se fizerem muita questão, vamos ter oportunidade no casamento para vocês deixarem mensagens, uma carta escrita com carinho, e você entregando tudo na pista de dança vão ser nosso MELHOR pedido de presente realizado!`
                 }
             },
             {

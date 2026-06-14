@@ -5,12 +5,13 @@ import {X} from "lucide-react";
 import {BackButton} from "@/components/BackButton.jsx";
 
 
-class RSVPForm {
+export class RSVPForm {
     constructor() {
         this.attending = ''
         this.plusOne = 'no'
         this.plusOneName = ''
         this.guestName = ''
+        this.guest = ''
         this.hairNeeded = ''
         this.joiningWednesdayEvent = false
         this.joiningThursdayEvent = false
@@ -85,7 +86,7 @@ export const RSVPPage = ({t, lang}) => {
                     {successMsg !== "" && <p className="mt-4 text-sm ">{successMsg}</p>}
                     <button
                         onClick={() => setStep('form')}
-                        className="w-32 bg-[var(--color-secondary)] text-white py-3 rounded-full font-bold mt-4 hover:opacity-90">
+                        className="cursor-pointer w-32 bg-[var(--color-secondary)] text-white py-3 rounded-full font-bold mt-4 hover:opacity-90">
                         {t.backBtn}
                     </button>
 
@@ -264,7 +265,7 @@ export const RSVPPage = ({t, lang}) => {
                         <div className={'mt-2 text-sm text-[var(--color-primary)]'}>{t.modal.changeOfPlans}</div>
 
                         <button type="submit"
-                                className="w-full bg-[var(--color-secondary)] text-white py-3 rounded-full font-bold mt-4 hover:opacity-90">{t.modal.submit}</button>
+                                className="cursor-pointer w-full bg-[var(--color-secondary)] text-white py-3 rounded-full font-bold mt-4 hover:opacity-90">{t.modal.submit}</button>
                     </form>
                 </div>
             )}

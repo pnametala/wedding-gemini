@@ -9,7 +9,7 @@ export const CONTENT = {
             story: {title: "Our Story", sub: "From Australia to Bahia"},
             stay: {title: "Where to Stay", sub: "Map and Hotels"},
             dress: {title: "Dress Code", sub: "Tropical Smart Casual"},
-            faq: {title: "FAQ", sub: "Common Questions"},
+            faq: {title: "FAQ", sub: "Gifts & Questions"},
             travel: {title: "Getting There", sub: "Flights and Tips"},
             dest: {title: "Porto Seguro", sub: "Why there?"}
         },
@@ -21,7 +21,7 @@ export const CONTENT = {
                 pre: [
                     {
                         time: "Wednesday - 7:00 pm",
-                        title: "The Kick-off",
+                        title: "The Kick-off - Barbecue",
                         desc: "We'd love to catch up with early arrivals and their families for a welcome dinner to officially start the celebrations.",
                         badge: "Condominio Vila Mar",
                         color: "secondary"
@@ -34,16 +34,22 @@ export const CONTENT = {
                         color: "highlight"
                     },
                     {
-                        time: "Friday - 10:00 am",
+                        time: "Friday - 11:00 am",
                         title: "Pre-Wedding/Beach Day",
-                        desc: "A day to relax by the beach with live music and good company. The only rule is simple: enjoy your self but don't peak too early! Everyone home early so we're 100% for the big day tomorrow.",
-                        badge: "Location TBC",
+                        desc: "A day to relax by the beach with live music and good company. The only rule is simple: enjoy yourself but don't peak too early! Everyone home early so we're 100% for the big day tomorrow.",
+                        badge: "Barraca Jinga",
                         color: "muted"
                     }
                 ],
                 wed: [
                     {
-                        time: "Saturday - 3:30 pm",
+                        time: "Saturday - 2:15pm",
+                        title: "Getting There",
+                        desc: "For guests' comfort, transportation will be provided at Vila Mar condominium and Porto Gerais hotel, to the ceremony venue.",
+                        badge: "Condomínio Vila Mar | Hotel Porto Gerais",
+                    },
+                    {
+                        time: "Saturday - 3:00 pm",
                         title: "Ceremony",
                         desc: "The highlight of this wedding has finally arrived! We can't wait to make it official in front of our favourite people in the world.",
                         badge: "Hotel Solar do Imperador",
@@ -85,7 +91,7 @@ export const CONTENT = {
             dietary: "Any dietary requirements?",
             dietaryPlusOne: "Does your guest have any dietary requirements?",
             message: "Message (Optional)",
-            messagePlaceholder: "Leave a message for the couple, or use this spacemention anything important for them to know about your confirmation (e.g. if kids are coming and what times, family members joining the warm-up events, or any other details that might help with our planning).",
+            messagePlaceholder: "Leave a message for the couple, or use this space to mention anything important for them to know about your confirmation (e.g. if kids are coming and what times, family members joining the warm-up events, or any other details that might help with our planning).",
             ai_wish_btn: "✨ Create Message",
             ai_wish_loading: "Writing...",
             yesAttend: "Yes, wouldn't miss it!",
@@ -93,7 +99,7 @@ export const CONTENT = {
             yesPlusOne: "Yes",
             noPlusOne: "No",
             hairNeeded: "Would you like to book hair and makeup for the big day? ($370.00 BRL pp)",
-            joiningWednesdayEvent: "Planning to come to the Dinner? (16/09, 7pm)",
+            joiningWednesdayEvent: "Planning to come to the welcoming barbecue? (16/09, 7pm)",
             joiningThursdayEvent: "Planning to go to Axé Moi? (17/09, 11am)",
             joiningFridayEvent: "Planning to go to the Beach Day? (18/09, 11am)",
             submit: "Send Confirmation",
@@ -163,7 +169,7 @@ Being able to gather all these roots and pieces of ourselves that have been scat
             story: {title: "Nossa História", sub: "Da Austrália para Bahia"},
             stay: {title: "Onde ficar", sub: "Mapa e Hoteis"},
             dress: {title: "Traje", sub: "Dicas de looks"},
-            faq: {title: "Dúvidas", sub: "Perguntas Frequentes"},
+            faq: {title: "Dúvidas", sub: "Presentes & Perguntas"},
             travel: {title: "Como Chegar", sub: "Voos e Dicas"},
             dest: {title: "Porto Seguro", sub: "Porquê lá?"}
         },
@@ -175,7 +181,7 @@ Being able to gather all these roots and pieces of ourselves that have been scat
                 pre: [
                     {
                         time: "Quarta - 19:00",
-                        title: "Abertura dos Trabalhos",
+                        title: "Abertura dos Trabalhos - Churrasco",
                         desc: "Vamos adorar encontrar os que vão chegar antes e suas famílias para um jantar de recepção e início oficial das comemorações.",
                         badge: "Condominio Vila Mar",
                         color: "secondary"
@@ -188,16 +194,22 @@ Being able to gather all these roots and pieces of ourselves that have been scat
                         color: "highlight"
                     },
                     {
-                        time: "Sexta  - 10:00",
+                        time: "Sexta  - 11:00",
                         title: "Pre-Wedding/Beach day",
                         desc: "Dia de relaxar na praia com música ao vivo e boa companhia. A unica regra do rolê é: aproveite o dia, mas sem queimar a largada!! Todo mundo em casa cedo para estarmos 100% para o grande dia amanhã.",
-                        badge: "Local a decidir",
+                        badge: "Barraca Jinga",
                         color: "muted"
                     }
                 ],
                 wed: [
                     {
-                        time: "Sábado - 15:30",
+                        time: "Sábado - 14:15",
+                        title: "O transporte",
+                        desc: "Para conforto dos convidados, o transporte será disponibilizado no condomínio Vila Mar e no hotel Porto Gerais, até o local onde a cerimônia será realizada.",
+                        badge: "Condomínio Vila Mar | Hotel Porto Gerais",
+                    },
+                    {
+                        time: "Sábado - 15:00",
                         title: "Cerimônia",
                         desc: "O ponto alto desse casamento finalmente chegou! Mal podemos esperar para oficializar nossa união em frente às pessoas que mais amamos nesse mundo.",
                         badge: "Hotel Solar do Imperador",
@@ -247,8 +259,8 @@ Being able to gather all these roots and pieces of ourselves that have been scat
             yesPlusOne: "Sim",
             noPlusOne: "Não",
             hairNeeded: "Gostaria de fazer cabelo e maquiagem para o grande dia? (R$370,00 pp)",
-            joiningWednesdayEvent: "Pretende ir no Jantar? (16/09, 19hs)",
-            joiningThursdayEvent: "Petende ir no dia da Barraca Axe Mói? (17/09, 11am)",
+            joiningWednesdayEvent: "Pretende ir no churrasco de boas vindas? (16/09, 19hs)",
+            joiningThursdayEvent: "Pretende ir no dia da barraca Axé Moi? (17/09, 11am)",
             joiningFridayEvent: "Pretende ir no BeachDay/Aquecimento? (18/09, 11am)",
             submit: "Enviar Confirmação",
             changeOfPlans: "Caso os planos mudem e você não possa mais comparecer ao casamento, por favor, entre em contato com com os noivos o mais rápido possível",

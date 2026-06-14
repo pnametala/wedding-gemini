@@ -33,7 +33,7 @@ export const HomePage = ({t}) => {
                         {t.lineup_info}
                     </a>
                     </div>
-                    <div class="mt-10">
+                    <div className="mt-10">
                     <Link to="/rsvp"
                             className="bg-[var(--color-primary)] text-white px-8 py-3 rounded-full font-[var(--font-heading)] font-bold tracking-widest border border-[var(--color-primary)] hover:bg-[#d65b38] hover:-translate-y-1 hover:shadow-lg transition-all">
                         {t.rsvp_btn}

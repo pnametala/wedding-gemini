@@ -28,7 +28,7 @@ export const DressCodePage = ({t, lang}) => (
                 className="bg-[var(--color-secondary)] text-white px-6 py-2 rounded-full font-bold text-sm hover:opacity-90">
                 {lang === 'en-AU' ? 'Inspo on Pinterest' : 'Inspirações no Pinterest'}
             </a>
-            <div class="mt-4 text-sm">{lang === 'en-AU'
+            <div className="mt-4 text-sm">{lang === 'en-AU'
                 ? "The link above is JUST for inspiration—feel free to wear whatever best suits your style within the recommended dress code!"
                 : "O link acima é APENAS para inspiração, fique a vontade para usar o que for mais a sua cara dentro do traje recomendado!"}</div>
             {/* TODO: ADD BUTTON */}
@@ -50,7 +50,7 @@ export const DressCodePage = ({t, lang}) => (
                 {lang === 'en-AU' ? 'Inspo on Pinterest' : 'Inspirações no Pinterest'}
             </a> 
 
-            <div class="mt-4 text-sm">{lang === 'en-AU'
+            <div className="mt-4 text-sm">{lang === 'en-AU'
                 ? "The link above is JUST for inspiration—feel free to wear whatever best suits your style within the recommended dress code!"
                 : "O link acima é APENAS para inspiração, fique a vontade para usar o que for mais a sua cara dentro do traje recomendado!"}</div>
             {/* TODO: ADD BUTTON */}

@@ -29,8 +29,9 @@ export const StayPage = ({t, lang}) => {
                     subDesc: "O hotel tem uma van que vai para a área da praia todos os dias às 10am, e vamos ver a possibilidade de também estar operando em alguns outros horários.",
                     weddingTime: "0 minutos",
                     beachTime: "10/15 minutos",
-                    directLink: "",
+                    directLink: "https://solardoimperador.letsbook.com.br/reserva/",
                     bookingLink: "https://www.booking.com/Share-cCmOVg1",
+                    extra: "Cupom de 10% - WEDRAIPEDRO"
                 },
                 {
                     name: "2. Porto Geraes Praia Hotel",
@@ -79,8 +80,9 @@ export const StayPage = ({t, lang}) => {
                     subDesc: "The hotel has a shuttle van that goes to the beach every day at 10 am, and we're checking if they can run at other times too.",
                     weddingTime: "0 minutes (You're already there!)",
                     beachTime: "10/15 minutes",
-                    directLink: "",
+                    directLink: "https://solardoimperador.letsbook.com.br/reserva/",
                     bookingLink: "https://www.booking.com/Share-cCmOVg1",
+                    extra: "10% Discount - WEDRAIPEDRO"
                 },
                 {
                     name: "2. Porto Geraes Praia Hotel",
@@ -152,7 +154,7 @@ export const StayPage = ({t, lang}) => {
                         </div>
 
                         {!hotel.noBooking && hotel.directLink !== "" && <p className="text-sm text-gray-500 font-bold mt-5">{s.discount}
-                            <a className='ml-1 text-[var(--color-secondary)]'
+                            <a className='ml-1 text-[var(--color-secondary)]' target={"_blank"}
                                href={hotel.directLink}>Link</a>
                         </p>}
 
@@ -161,7 +163,7 @@ export const StayPage = ({t, lang}) => {
                         {!hotel.noBooking && hotel.bookingLink !== ""  && (
                             <>
                                 <p className="text-sm text-gray-500 font-bold mt-5">{s.booking}
-                                    <a className='ml-1 text-[var(--color-secondary)]'
+                                    <a className='ml-1 text-[var(--color-secondary)]' target={"_blank"}
                                        href={hotel.bookingLink}>Link</a>
                                 </p>
                                 <p className="text-sm text-gray-500 mt-2">{s.bookingNote}</p>

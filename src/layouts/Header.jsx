@@ -1,21 +1,19 @@
-import {Link, useLocation, useNavigate} from "react-router-dom";
-import {signOut} from "firebase/auth";
-import {auth} from "@/lib/firebase.js";
+import {Link, useLocation} from "react-router-dom";
 import {useAuth} from "@/context/AuthContext.jsx";
+import React from "react";
 
-export const Header = ({ isScrolled, lang, setLang, t}) => {
+export const Header = ({isScrolled, lang, setLang}) => {
     const location = useLocation();
     const isLandingPage = location.pathname === '/';
-    const navigate = useNavigate();
-    const { currentUser } = useAuth();
+    const {currentUser} = useAuth();
 
     if (!currentUser) {
         return (<></>)
     }
     return (
-        <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 flex justify-between items-center px-6 py-3
+        <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 flex justify-between items-center px-6 py-3 z-50
     ${isScrolled || !isLandingPage ? 'translate-y-0 shadow-md rounded-b-[20px] backdrop-blur-sm' : '-translate-y-full bg-transparent'}`}
-            style={{ backgroundColor: isScrolled || !isLandingPage ? 'rgba(46, 74, 61, 0.95)' : 'transparent' }}
+                style={{backgroundColor: isScrolled || !isLandingPage ? 'rgba(46, 74, 61, 0.95)' : 'transparent'}}
         >
             <Link
                 to={"/"}
@@ -44,7 +42,7 @@ export const Header = ({ isScrolled, lang, setLang, t}) => {
                 >
                     RSVP
                 </Link>
-                
+
             </div>
         </header>
     );

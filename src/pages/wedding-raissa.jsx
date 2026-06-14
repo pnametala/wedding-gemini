@@ -18,6 +18,8 @@ import {useLottie} from "lottie-react";
 import {initializeApp} from "@firebase/app";
 import {RSVPPage} from "@/pages/RSVPPage.jsx";
 import LoginPage from "@/pages/LoginPage.jsx";
+import ScrollToTop from "@/components/ScrollToTop.jsx";
+import {RSVPListPage} from "@/pages/RSVPListPage.jsx";
 
 /* --- GEMINI API UTILITIES --- */
 
@@ -67,7 +69,7 @@ export const app = initializeApp(firebaseConfig);
 export default function RaissaApp() {
     const [lang, setLang] = useState(() => {
         const browserLang = navigator.language.split('-');
-        const bl = (browserLang[0] !== 'en') ? null : navigator.language;
+        const bl = (browserLang[0] !== 'en' || browserLang[0] !== 'pt') ? null : navigator.language;
         return localStorage.getItem('nameissa-lang') || bl || 'en-AU'
     });
     const [isScrolled, setIsScrolled] = useState(false);
@@ -86,7 +88,10 @@ export default function RaissaApp() {
 
     const options = {
         animationData: fitasAnimation,
-        loop: true
+        loop: false,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        }
     };
 
     const {View} = useLottie(options);
@@ -116,17 +121,17 @@ export default function RaissaApp() {
           --font-body: 'Montserrat', sans-serif;
         }
       `}</style>
+            <div className={'absolute top-0 right-0 pr-5 w-xl pointer-events-none'}>{View}</div>
             <AuthProvider>
                 <BrowserRouter>
-                    <Header isScrolled={isScrolled} lang={lang} setLang={setLang} t={t} />
-
-                    <div className={'absolute top-0 right-0 pr-5 w-96'}>{View}</div>
+                    <Header isScrolled={isScrolled} lang={lang} setLang={setLang} t={t}/>
                     <main>
+                        <ScrollToTop/>
                         <Routes>
                             <Route path="/login" element={<LoginPage/>}/>
                             <Route path="/" element={
                                 <ProtectedRoute>
-                                    <HomePage t={t} />
+                                    <HomePage t={t}/>
                                 </ProtectedRoute>}/>
                             <Route path="story"
                                    element={<ProtectedRoute><StoryPage t={t} lang={lang}/></ProtectedRoute>}/>
@@ -141,12 +146,13 @@ export default function RaissaApp() {
                                    element={<ProtectedRoute><TravelPage t={t} lang={lang}/></ProtectedRoute>}/>
                             <Route path="rsvp"
                                    element={<ProtectedRoute><RSVPPage t={t} lang={lang}/></ProtectedRoute>}/>
+                            <Route path="rsvp-list"
+                                   element={<ProtectedRoute><RSVPListPage t={t} lang={lang}/></ProtectedRoute>}/>
                         </Routes>
                     </main>
+                    <Footer/>
                 </BrowserRouter>
             </AuthProvider>
-
-            <Footer/>
         </div>
     )
         ;
