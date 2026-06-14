@@ -248,7 +248,7 @@ Being able to gather all these roots and pieces of ourselves that have been scat
             noPlusOne: "Não",
             hairNeeded: "Gostaria de fazer cabelo e maquiagem para o grande dia? (R$370,00 pp)",
             joiningWednesdayEvent: "Pretende ir no Jantar? (16/09, 19hs)",
-            joiningThursdayEvent: "Petende ir no dia da Barraca Axe Mói? (17/09, 11am)",
+            joiningThursdayEvent: "Pretende ir no dia da barraca Axé Mói? (17/09, 11am)",
             joiningFridayEvent: "Pretende ir no BeachDay/Aquecimento? (18/09, 11am)",
             submit: "Enviar Confirmação",
             changeOfPlans: "Caso os planos mudem e você não possa mais comparecer ao casamento, por favor, entre em contato com com os noivos o mais rápido possível",
